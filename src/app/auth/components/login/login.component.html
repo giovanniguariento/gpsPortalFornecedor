@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light bg-dark">
+    
+
+            <div class="col-6 text-center">
+            <img src="../../assets/images/logoLogin.png" alt="" width="254" height="59">
+        </div>
+        <div class="col-5" >
+            <h1 class="titulo">Portal do Fornecedor</h1>
+        </div>
+
+
+   
+</nav>
+
+<div class="bg-login">
+    <div class="container pt-3 pb-5">
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-6 card mt-5">
+                <label class="label mb-4 tituloLogin">Insira seus dados para entrar</label>
+
+
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Login" />
+                    <i class="fa fa-eye" style="opacity: 0" aria-hidden="true"></i>
+                </div>
+
+                <div class="input-group mt-3" style="align-items: center">
+                    <input [(ngModel)]="senha" type="password" class="form-control" placeholder="Senha"
+                        id="inputSenha" />
+                    <button class="btn p-0 icone-olho" (click)="revelaEscondeSenha()">
+                        <i class="fa fa-eye c-black icone-olho" id="iconeOlho" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="row mt-4 text-center">
+                    <div class="col-9">
+                        <p class="esqueci-senha ml-2 mt-2 ">Esqueci Minha Senha</p>
+                    </div>
+
+                    <div class="col-3"> <button class="btn btn-outline-light " type="submit"
+                            [ngClass]="{ 'disabled': !cnpj && !senha}" [disabled]="!cnpj && !senha"
+                            (click)='logar()'>Entrar</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</div>

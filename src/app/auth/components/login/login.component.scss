@@ -1,0 +1,67 @@
+.bg-dark{
+    height: 200px;
+    background-color: #0F2533 !important;
+}
+
+.tituloLogin{
+    color: white;
+}
+
+.icone-olho{
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 auto;
+    position: relative;
+    left: -25px;
+    &:hover { cursor: pointer; }
+}
+
+input:-webkit-autofill { 
+    box-shadow: 0 0 0 30px white inset !important; 
+  }
+
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #7d92a0 !important;
+    outline: none;
+    box-shadow:none;
+  }
+
+  .c-black {
+    color: black;
+  }
+
+  .card {
+    width: 40%;
+    background: #0F2533;
+    border-radius: 40px;
+  }
+
+  .esqueci-senha{
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration-line: underline;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: left;
+}
+
+.bg-login{
+    max-width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/images/u0.png");
+    background-size: 100%;
+    background-color: #f1f1f3;
+    background-size: cover;
+}
+
+.btn-grande {
+ align-content: right;
+    width: auto;
+    height: auto;
+}
+
+.titulo{
+  color: white;
+}

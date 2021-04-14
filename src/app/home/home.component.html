@@ -1,0 +1,11 @@
+<app-loading [loading]="loading"></app-loading>
+<app-success [successGenerico]="alertSucesso" (alertFechou)="fecharAlertSucesso($event)">
+</app-success>
+
+<app-error [error]="error" (alertFechou)="fecharerror($event)">
+</app-error>
+<div class="row mt-5">
+    <div class="col-12 text-center">
+        <h1 class="titulo mb-5">Portal de Fornecedores</h1>
+    </div>
+</div>

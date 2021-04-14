@@ -1,0 +1,8 @@
+<div class="body-alert" *ngIf="loading === true">
+    <div class="div-alert text-center">
+          <div class="spinner-border c-primary" role="status">
+            <span class="sr-only" [innerHTML]="messageString"></span>
+          </div>
+          <p class="legenda-spinner mb-0" [innerHTML]="messageString"></p>
+    </div>
+</div>
