@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   public logar(){
+    
     localStorage.setItem('userLogin' , 'true')
-
     setTimeout(() => {
       this.router.navigate(['/home']);
     }, 0);
