@@ -8,8 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path:  'home', component : HomeComponent, canActivate : [GuardService]},
-  {path:  '', component : HomeComponent, canActivate : [GuardService]},  
   {path:  'ConsultarPedidosCompra', component : ConsultarPedidoCompraComponent, canActivate : [GuardService]},
+  {path:  '', component : HomeComponent, canActivate : [GuardService]},  
   { path: 'auth', loadChildren : () => import( './auth/auth.module' ).then ( m =>m.AuthModule) }
 
 ];
