@@ -23,7 +23,7 @@
 
 
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Login" />
+                    <input type="text" [(ngModel)]="cnpj" class="form-control" placeholder="Login" />
                     <i class="fa fa-eye" style="opacity: 0" aria-hidden="true"></i>
                 </div>
 
@@ -39,9 +39,9 @@
                         <p class="esqueci-senha ml-2 mt-2 ">Esqueci Minha Senha</p>
                     </div>
 
-                    <div class="col-3"> <button class="btn btn-outline-light " type="submit"
-                            [ngClass]="{ 'disabled': !cnpj && !senha}" [disabled]="!cnpj && !senha"
-                            (click)='logar()'>Entrar</button>
+                    <div class="col-3"> 
+                        <button class="btn btn-outline-light " type="submit"
+                            [ngClass]="{ 'disabled': cnpj == null || senha == null}" [disabled]="cnpj == null || senha == null " (click)='logar()'>Entrar</button>
                     </div>
                 </div>
 

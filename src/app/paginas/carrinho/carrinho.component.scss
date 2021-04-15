@@ -1,0 +1,11 @@
+.icones {
+    position: fixed; 
+    bottom: 2%; 
+    left: 90%;
+    padding: 1%;
+    z-index: 10000000;
+    cursor: pointer;
+}
+.icones img:hover { 
+    filter: blur(100%); 
+}

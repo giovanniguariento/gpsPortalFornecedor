@@ -3,10 +3,19 @@ import { SharedModule } from './../../shared/shared.module';
 import { ConsultarPedidoCompraComponent } from './../consultar-pedido-compra/consultar-pedido-compra.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GerarPedidoCompraComponent } from '../gerar-pedido-compra/gerar-pedido-compra.component';
+import { CarrinhoComponent } from '../carrinho/carrinho.component';
+import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component';
 
 
 @NgModule({
-  declarations: [ConsultarPedidoCompraComponent , ConsultaTitulosPagosComponent],
+  declarations: [
+    ConsultarPedidoCompraComponent , 
+    ConsultaTitulosPagosComponent,
+    GerarPedidoCompraComponent,
+    CarrinhoComponent,
+    CarrinhoPageComponent
+  ],
   imports: [
     CommonModule,
     SharedModule

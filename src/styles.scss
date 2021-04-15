@@ -5,6 +5,7 @@
 
 .titulo {
     font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     color: var(--primary-color);
     margin: 0px 0px 4px !important;
@@ -28,6 +29,8 @@
     padding: 24px;
     display: block;
     border: none;
+    height: 550px; 
+    overflow-y : auto;
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -102,3 +105,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   left: 6px;
 }
 
+.icone-olho{
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10000;
+  left: -25px;
+  &:hover { cursor: pointer; }
+}
+
+.btnGps {
+  background-color: var(--primary-color);
+  
+}

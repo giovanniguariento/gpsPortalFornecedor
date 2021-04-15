@@ -1,3 +1,4 @@
+import { GerarPedidoCompraComponent } from './paginas/gerar-pedido-compra/gerar-pedido-compra.component';
 import { ConsultaTitulosPagosComponent } from './paginas/consulta-titulos-pagos/consulta-titulos-pagos.component';
 import { GuardService } from './auth/services/guard.service';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:  'ConsultarPedidosCompra', component : ConsultarPedidoCompraComponent, canActivate : [GuardService]},
   {path:  '', component : HomeComponent, canActivate : [GuardService]},  
   {path:  'ConsultaTitulos', component : ConsultaTitulosPagosComponent, canActivate : [GuardService]},
+  {path:  'GerarPedidoCompra', component : GerarPedidoCompraComponent, canActivate : [GuardService]},
   { path: 'auth', loadChildren : () => import( './auth/auth.module' ).then ( m =>m.AuthModule) }
 
 ];

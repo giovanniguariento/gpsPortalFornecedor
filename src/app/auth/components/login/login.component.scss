@@ -12,6 +12,7 @@
     font-weight: 200;
     margin: 0 auto;
     position: relative;
+    z-index: 10000;
     left: -25px;
     &:hover { cursor: pointer; }
 }
@@ -56,11 +57,6 @@ input:-webkit-autofill {
     background-size: cover;
 }
 
-.btn-grande {
- align-content: right;
-    width: auto;
-    height: auto;
-}
 
 .titulo{
   color: white;
