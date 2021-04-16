@@ -1,4 +1,4 @@
-import { GenericoModule } from './../genericos/generico/generico.module';
+import { PaginasModule } from './../paginas/paginas/paginas.module';
 import { SharedModule } from './../shared/shared.module';
 
 
@@ -7,15 +7,16 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './components/login/login.component';
+import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, EsqueciSenhaComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SharedModule,
-    GenericoModule
+    PaginasModule
   ]
 })
 export class AuthModule { }

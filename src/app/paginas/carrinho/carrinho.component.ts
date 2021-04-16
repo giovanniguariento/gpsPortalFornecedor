@@ -14,14 +14,12 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit() {
   }
 
-  public abrirCarrinho(){
+  public abrirCarrinho() {
     this.carrinho = true;
-    console.log(this.carrinho)
   }
 
-          // Fechar o alerta de error, clicando no botão OK
-          fecharCarrinho(evento: string) {
-            this.carrinho = false;
-          }
+  fecharCarrinho(evento: string) {
+    this.carrinho = false;
+  }
 
 }

@@ -1,0 +1,28 @@
+<div class="body-alert" *ngIf="esqueciSenha === true">
+    <div class="tamanhoBox scroll text-center" (blur)='fechar()'>
+      <div class="row ">
+        <div class="col-lg-10"></div>
+        <div class="col-lg-2">
+          <button class="btn" (click)="fechar()">
+            <i class="fa fa-times  fa-2x" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <img
+        class=" imagem"
+        src="../../../assets/images/esqueciSenha.png" width="100px" alt=""
+      />
+
+      <hr>
+      <h4 class="alinharTexto mt-4">Digite o seu email cadastrado.</h4>
+            <div class="input-group">
+                <input type="text" class="form-control" id="inputSenha" placeholder="contato@grupogps.com.br" />
+
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-dark btn-sm btnGps mt-4">Enviar</button>    
+
+      </div>
+</div>
+  </div>
+  

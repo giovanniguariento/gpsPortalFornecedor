@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   public cnpj : any;
   public senha : any;
+  public esqueciSenha = false;
   constructor(private router: Router,private authService : AuthService) { }
 
   ngOnInit() {
@@ -28,6 +29,15 @@ export class LoginComponent implements OnInit {
     
 
   }
+
+  public abrirEsqueciSenha() {
+    this.esqueciSenha = true;
+  }
+
+  fecharEsqueciSenha(evento: string) {
+    this.esqueciSenha = false;
+  }
+
 
   
   revelaEscondeSenha() {

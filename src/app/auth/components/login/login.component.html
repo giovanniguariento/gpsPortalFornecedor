@@ -1,3 +1,5 @@
+<app-esqueci-senha [esqueciSenha]="esqueciSenha" (alertFechou)="fecharEsqueciSenha($event)"></app-esqueci-senha>
+
 <nav class="navbar navbar-light bg-dark">
     
 
@@ -36,7 +38,7 @@
                 </div>
                 <div class="row mt-4 text-center">
                     <div class="col-9">
-                        <p class="esqueci-senha ml-2 mt-2 ">Esqueci Minha Senha</p>
+                        <p (click)='abrirEsqueciSenha()' class="esqueci-senha ml-2 mt-2 ">Esqueci Minha Senha</p>
                     </div>
 
                     <div class="col-3"> 
