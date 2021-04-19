@@ -24,7 +24,7 @@
               </div>
               <div class="col-5"></div>
               <div class="col-1">
-                <i class="fa fa-trash icone-lupa mt-2 "></i>
+                <i class="fa fa-trash icone-lupa mt-2 lixo "></i>
               </div>
             </div>
           </h5>
@@ -55,17 +55,19 @@
         </div>
       </div>
     </div>
+    <hr>
     <div class="row">
       <div class="col-4"></div>
       <div class="col-4"></div>
       <div class="col-4">
-        <h5 class="text-nowrap mt-5 alinharEsquerda">Valor Total</h5>
+        <h5 class="text-nowrap alinharEsquerda">Valor Total</h5>
                 <div class="input-group">
                     <input [(ngModel)]="valorTotalCompra" type="text" class="form-control" readonly />
                 </div>
       </div>
     </div>
-    <button class="btn btn-dark btnGps mt-4" type="button">Finalizar compra</button>
+    <hr>
+    <button class="btn btn-dark btnGps mt-1" type="button">Finalizar compra</button>
 
   </div>
 </div>
