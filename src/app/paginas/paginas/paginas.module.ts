@@ -19,6 +19,10 @@ import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component'
   imports: [
     CommonModule,
     SharedModule
+  ],
+  exports : [
+    CarrinhoComponent,
+    CarrinhoPageComponent
   ]
 })
 export class PaginasModule { }
