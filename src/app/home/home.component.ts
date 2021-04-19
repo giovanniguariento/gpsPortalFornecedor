@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-    // Fechar o alerta de sucesso, clicando no botão OK
-    fecharAlertSucesso(evento: string) {
-      this.alertSucesso = false;
-    }
+  // Fechar o alerta de sucesso, clicando no botão OK
+  fecharAlertSucesso(evento: string) {
+    this.alertSucesso = false;
+  }
 
-        // Fechar o alerta de error, clicando no botão OK
-        fecharerror(evento: string) {
-          this.error = false;
-        }
+  // Fechar o alerta de error, clicando no botão OK
+  fecharerror(evento: string) {
+    this.error = false;
+  }
 
 }

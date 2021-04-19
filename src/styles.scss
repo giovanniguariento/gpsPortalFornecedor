@@ -99,6 +99,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-radius: 12px;
 }
 
+//----------------------------------------------------------------
+
 .logo{
   position: absolute;
   top: 6px;
@@ -139,3 +141,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border: 1px solid #ced4da;
     border-radius: .25rem;
 }
+
+//estilo do scrollbar
+
+body::-webkit-scrollbar {
+  width: 20px;              
+}
+
+body::-webkit-scrollbar-track {
+  background: white;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);     
+  border-radius: 20px;       
+  border: 3px solid white;  
+}
+
+.scroll::-webkit-scrollbar {
+  width: 20px;               
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: white;        
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);    
+  border-radius: 20px;       
+  border: 3px solid white;  
+}
+//-----------------------------------------
