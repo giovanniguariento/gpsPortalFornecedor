@@ -14,6 +14,9 @@ export class GerarPedidoCompraComponent implements OnInit {
   public valorUni = 10;
   public valorTotal;
   public quantidade;
+  public regioesCadastradas: any = {
+    'titulo': 'JSON x XML',
+   };
   carrinho = false;
 
   constructor() { }

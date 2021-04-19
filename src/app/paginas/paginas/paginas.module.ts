@@ -18,7 +18,7 @@ import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component'
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
   ],
   exports : [
     CarrinhoComponent,

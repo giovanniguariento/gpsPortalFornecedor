@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 
 import { GenericoRoutingModule } from './generico-routing.module';
 
-
 @NgModule({
   declarations: [LoadingComponent , SuccessComponent , ErrorComponent],
   imports: [
