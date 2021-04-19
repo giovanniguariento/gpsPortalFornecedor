@@ -13,26 +13,28 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-3" >
+                <div class="col-lg-3" *ngIf="centroCusto" >
                     <h5>Local para Entrega</h5>
                     <div class="input-group">
-                        <select [(ngModel)]="localEntrega" class="form-select" [disabled]="centroCusto == null">
-                            <option selected>Selecione um endereco</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        <ng-select class="form-select" 
+                        [items]="accounts"
+                        bindLabel="country"
+                        bindValue="name"
+                        [(ngModel)]="localEntrega">
+                </ng-select>
                     </div>
+
                 </div>
-                <div class="col-lg-3 mb-4">
+                <div class="col-lg-3 mb-4" *ngIf="localEntrega">
                     <h5>Produto</h5>
                     <div class="input-group">
-                        <select [(ngModel)]="produto" (click)='produtos()' class="form-select" [disabled]="localEntrega == null">
-                            <option selected>Selecione um produto</option>
-                            <option value="Fornecedor: Kalunga / Loja: 01">papel</option>
-                            <option value="Fornecedor: Americanas / Loja: 02">caneta</option>
-                            <option value="Fornecedor: Atacadao / Loja: 08">vasoura</option>
-                        </select>
+                        <ng-select class="form-select" 
+                        (click)='produtos()'
+                        [items]="produtosTemp"
+                        bindLabel="produto"
+                        bindValue="produto"
+                        [(ngModel)]="produto">
+                </ng-select>
                     </div>
                 </div>
             </div>
@@ -64,10 +66,14 @@
                         <input [(ngModel)]="valorTotal" type="text" class="form-control" readonly/>
                     </div>
                 </div>
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <h5></h5>
+                    <button class="btn btn-danger mt-4" (click)='cancelar()' type="button">Cancelar</button>
+                </div>
             </div>
             <div class="row mt-5">
-                <div class="col-9"></div>
-                <div class="col-3">
+                <div class=" alinharDireita">
                 <button class="btn btn-dark btn-lg btnGps" type="button">Adicionar ao Carrinho</button>
             </div>
             </div>

@@ -11,6 +11,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { FormsModule }   from '@angular/forms';
     FormsModule,
     GenericoModule,
     PaginasModule,
-    SharedModule
+    SharedModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -123,3 +123,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .alinharDireita {
   text-align: right !important;
 }
+
+.alinharEsquerda {
+  text-align: left !important;
+}
+
+.ng-dropdown-panel {
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0;
+  width: 90% !important;
+  z-index: 1050;
+  background-color: white !important;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #ced4da;
+    border-radius: .25rem;
+}

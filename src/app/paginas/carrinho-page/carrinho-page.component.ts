@@ -6,6 +6,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./carrinho-page.component.scss']
 })
 export class CarrinhoPageComponent implements OnInit {
+
+  valorTotalCompra = 500;
   
   @Input() carrinho: boolean = true;
   @Output() alertFechou = new EventEmitter();
