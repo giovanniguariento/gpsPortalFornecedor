@@ -22,7 +22,7 @@
     z-index: 500;
 }
 
-.card {
+.cardPerson {
     background: white;
     box-shadow: 0px 0px 5px 1px #0000001e;
     border-radius: 8px;
@@ -118,4 +118,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btnGps {
   background-color: var(--primary-color);
   
+}
+
+.alinharDireita {
+  text-align: right !important;
 }
