@@ -8,6 +8,7 @@ import { GerarPedidoCompraComponent } from '../gerar-pedido-compra/gerar-pedido-
 import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ConsultaTabelaPrecoComponent } from '../consulta-tabela-preco/consulta-tabela-preco.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     GerarPedidoCompraComponent,
     CarrinhoComponent,
     CarrinhoPageComponent,
-    ConsultaTitulosAbertoComponent
+    ConsultaTitulosAbertoComponent,
+    ConsultaTabelaPrecoComponent
   ],
   imports: [
     CommonModule,
