@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  isShowMenu = localStorage.getItem('userLogin');
+
+
+  constructor( private authService : AuthService) { }
 
   ngOnInit() {
+    this.authService.getShowMenuControl()
+    .subscribe(
+      (data : any) => { this.isShowMenu = data; }
+    );
   }
 
 }
