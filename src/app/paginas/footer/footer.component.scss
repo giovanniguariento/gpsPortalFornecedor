@@ -1,0 +1,23 @@
+.titulo-footer{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.5625px;
+    color: white;
+}
+
+.paragrafo-footer{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.bg-primary {
+    background: var(--primary-color) !important;
+  }
+
+.detalhe{ opacity: 0.9; font-weight: 400; }
