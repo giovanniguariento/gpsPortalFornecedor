@@ -1,0 +1,88 @@
+<div class="m-5 cardPerson">
+    <div class="col-12 text-center">
+        <div class="mb-4">
+            <h1 class="titulo mb-5">Consultar Tabela de Preço</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+    <div class="col-3">
+        <h5>CNPJ</h5>
+        <div class="input-group">
+            <input [(ngModel)]="cnpj" type="text" class="form-control" />
+            <button class="btn p-0 iconeSearch">
+                <i class="fa fa-search c-black" id="iconeOlho" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div class="col-3">
+        <h5>Tabela de Preço</h5>
+        <div class="input-group">
+            <input [(ngModel)]="tabelaPreco" type="text" class="form-control" />
+            <button class="btn p-0 iconeSearch">
+                <i class="fa fa-search c-black" id="iconeOlho" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-3"></div>
+    <div class="col-6">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <div class="row">
+                <div class="col-4 alinharEsquerda">
+                  <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Fornecedor: Novo Conceito
+                  </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Tabela de Preço : 001
+                  </button>
+                </div>
+                <div class="col-2 alinharDireita">
+                    <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Loja: 01
+                  </button>
+                </div>
+              </div>
+            </h5>
+          </div>
+  
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço Unitátio</th>
+                    <th scope="col">Vigência</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">0</th>
+                    <td>xxxx</td>
+                    <td>xxxx</td>
+                    <td>xxxx</td>
+                    <td>xxxx</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+    </div>
+</div>
