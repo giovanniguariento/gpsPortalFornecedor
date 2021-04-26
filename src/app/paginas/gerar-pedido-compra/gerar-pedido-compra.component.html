@@ -13,45 +13,38 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-3" *ngIf="centroCusto" >
+                <div class="col-lg-3" *ngIf="centroCusto">
                     <h5>Local para Entrega</h5>
                     <div class="input-group">
-                        <ng-select class="form-select" 
-                        [items]="accounts"
-                        bindLabel="country"
-                        bindValue="name"
-                        [(ngModel)]="localEntrega">
-                </ng-select>
+                        <ng-select class="form-select" [items]="accounts" bindLabel="country" bindValue="name"
+                            [(ngModel)]="localEntrega">
+                        </ng-select>
                     </div>
 
                 </div>
                 <div class="col-lg-3" *ngIf="localEntrega">
                     <h5>Produto</h5>
                     <div class="input-group">
-                        <ng-select class="form-select" 
-                        (click)='produtos()'
-                        [items]="produtosTemp"
-                        bindLabel="produto"
-                        bindValue="produto"
-                        [(ngModel)]="produto">
-                </ng-select>
+                        <ng-select class="form-select" (click)='produtos()' [items]="produtosTemp" bindLabel="produto"
+                            bindValue="produto" [(ngModel)]="produto">
+                        </ng-select>
                     </div>
                 </div>
             </div>
 
-        <hr>
+            <hr>
             <div class="row mt-3">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-3 text-nowrap">
-            <h3 class="mt-2">{{fornecedor}}</h3>
-        </div>
-        </div>
+                    <h3 class="mt-2">{{fornecedor}}</h3>
+                </div>
+            </div>
             <div class="row mt-3" *ngIf="fornecedor">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-2">
                     <h5>Quantidade</h5>
                     <div class="input-group">
-                        <input (blur)='valorTotalConta()' [(ngModel)]="quantidade" type="number" class="form-control"/>
+                        <input (blur)='valorTotalConta()' [(ngModel)]="quantidade" type="number" class="form-control" />
                     </div>
                 </div>
                 <div class="col-lg-2">
@@ -63,7 +56,7 @@
                 <div class="col-lg-3">
                     <h5>Total</h5>
                     <div class="input-group">
-                        <input [(ngModel)]="valorTotal" type="text" class="form-control" readonly/>
+                        <input [(ngModel)]="valorTotal" type="text" class="form-control" readonly />
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -74,8 +67,8 @@
                 <hr>
                 <div class="row mt-1">
                     <div class=" alinharDireita">
-                    <button class="btn btn-dark btn-lg btnGps" type="button">Adicionar ao Carrinho</button>
-                </div>
+                        <button class="btn btn-dark btn-lg btnGps" type="button">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
             </div>
 
