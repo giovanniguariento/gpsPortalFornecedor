@@ -8,6 +8,7 @@ import { ConsultarPedidoCompraComponent } from './paginas/consultar-pedido-compr
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AtualizarTabelaPrecoComponent } from './paginas/atualizar-tabela-preco/atualizar-tabela-preco.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path:  'GerarPedidoCompra', component : GerarPedidoCompraComponent, canActivate : [GuardService]},
   {path:  'ConsultaTitulosAberto', component : ConsultaTitulosAbertoComponent, canActivate : [GuardService]},
   {path:  'Consulta-Tabela-Preco', component : ConsultaTabelaPrecoComponent, canActivate : [GuardService]},
+  {path:  'Atualizar-Tabela-Preco', component : AtualizarTabelaPrecoComponent, canActivate : [GuardService]},
+
 
 
   { path: 'auth', loadChildren : () => import( './auth/auth.module' ).then ( m =>m.AuthModule) }

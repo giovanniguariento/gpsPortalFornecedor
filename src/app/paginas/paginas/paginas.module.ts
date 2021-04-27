@@ -9,9 +9,14 @@ import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ConsultaTabelaPrecoComponent } from '../consulta-tabela-preco/consulta-tabela-preco.component';
+import { AtualizarTabelaPrecoComponent } from '../atualizar-tabela-preco/atualizar-tabela-preco.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 
-
-@NgModule({
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};@NgModule({
   declarations: [
     ConsultarPedidoCompraComponent , 
     ConsultaTitulosPagosComponent,
@@ -19,12 +24,14 @@ import { ConsultaTabelaPrecoComponent } from '../consulta-tabela-preco/consulta-
     CarrinhoComponent,
     CarrinhoPageComponent,
     ConsultaTitulosAbertoComponent,
-    ConsultaTabelaPrecoComponent
+    ConsultaTabelaPrecoComponent,
+    AtualizarTabelaPrecoComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    NgSelectModule
+    NgSelectModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   exports : [
     CarrinhoComponent,

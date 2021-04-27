@@ -1,0 +1,9 @@
+.iconeSearch{
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    left: -25px;
+    &:hover { cursor: pointer; }
+}
