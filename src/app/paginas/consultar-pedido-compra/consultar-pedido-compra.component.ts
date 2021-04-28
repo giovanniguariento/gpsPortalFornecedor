@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultarPedidoCompraComponent implements OnInit {
 
+  public detalhesCompra = false;
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public abrirDetalhesCompra() {
+    this.detalhesCompra = true;
+  }
+
+
+  fecharDetalhesCompra(evento: string) {
+    this.detalhesCompra = false;
   }
 
 }

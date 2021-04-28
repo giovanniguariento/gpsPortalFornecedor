@@ -1,4 +1,3 @@
-import { ConsultaTitulosAbertoComponent } from './../consulta-titulos-aberto/consulta-titulos-aberto.component';
 import { ConsultaTitulosPagosComponent } from './../consulta-titulos-pagos/consulta-titulos-pagos.component';
 import { SharedModule } from './../../shared/shared.module';
 import { ConsultarPedidoCompraComponent } from './../consultar-pedido-compra/consultar-pedido-compra.component';
@@ -9,8 +8,8 @@ import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { CarrinhoPageComponent } from '../carrinho-page/carrinho-page.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ConsultaTabelaPrecoComponent } from '../consulta-tabela-preco/consulta-tabela-preco.component';
-import { AtualizarTabelaPrecoComponent } from '../atualizar-tabela-preco/atualizar-tabela-preco.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { DetalhesCompraComponent } from '../detalhes-compra/detalhes-compra.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -23,9 +22,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     GerarPedidoCompraComponent,
     CarrinhoComponent,
     CarrinhoPageComponent,
-    ConsultaTitulosAbertoComponent,
     ConsultaTabelaPrecoComponent,
-    AtualizarTabelaPrecoComponent
+    DetalhesCompraComponent
   ],
   imports: [
     CommonModule,

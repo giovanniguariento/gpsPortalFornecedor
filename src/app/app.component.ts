@@ -1,3 +1,4 @@
+import { MenuService } from './services/menu.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,4 +9,17 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'portalFornecedor';
-}
+    
+  
+    constructor( private menuService : MenuService) { }
+  
+    ngOnInit() {
+    }
+
+    public abrirMenu(){
+
+      this.menuService.abrirMenu()
+
+    }
+  
+  }

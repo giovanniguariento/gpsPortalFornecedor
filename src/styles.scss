@@ -30,8 +30,7 @@
     display: block;
     border: none;
     height: 787px; 
-    overflow-y : auto;
-  }
+    overflow-y : auto;  }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -172,3 +171,17 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid white;  
 }
 //-----------------------------------------
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.overFlow{
+overflow: auto;
+}
+

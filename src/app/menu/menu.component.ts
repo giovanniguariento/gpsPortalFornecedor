@@ -1,6 +1,7 @@
 import { AuthService } from './../auth/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,8 +11,9 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   isShowMenu = localStorage.getItem('userLogin');
+  openMenu = localStorage.getItem('menu');
 
-  constructor(private authService : AuthService, private router: Router ) { 
+  constructor(private authService : AuthService, private router: Router , private menuService : MenuService) { 
 
   }
 
@@ -20,6 +22,15 @@ export class MenuComponent implements OnInit {
       .subscribe(
         (data : any) => { this.isShowMenu = data; }
       );
+      console.log(localStorage.menu)
+
+      this.menuService.emitirMenu.subscribe(
+        (menu) => {
+          this.openMenu = menu;
+          console.log(menu)
+        }
+      );
+      
   }
 
   logout(){
