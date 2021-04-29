@@ -10,6 +10,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { ConsultaTabelaPrecoComponent } from '../consulta-tabela-preco/consulta-tabela-preco.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { DetalhesCompraComponent } from '../detalhes-compra/detalhes-compra.component';
+import { ToastrModule } from 'ngx-toastr';
+import { ImportarNotaFiscalComponent } from '../importar-nota-fiscal/importar-nota-fiscal.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -23,13 +25,16 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     CarrinhoComponent,
     CarrinhoPageComponent,
     ConsultaTabelaPrecoComponent,
-    DetalhesCompraComponent
+    DetalhesCompraComponent,
+    ImportarNotaFiscalComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     NgSelectModule,
     NgxMaskModule.forRoot(maskConfigFunction),
+    ToastrModule.forRoot({ timeOut: 30000, preventDuplicates: true }),
+
   ],
   exports : [
     CarrinhoComponent,

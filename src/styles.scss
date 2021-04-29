@@ -185,3 +185,18 @@ body::-webkit-scrollbar-thumb {
 overflow: auto;
 }
 
+.botao {
+  width: auto;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  &:focus {
+    outline: none;
+  }
+}
+

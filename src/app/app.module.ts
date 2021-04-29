@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FooterComponent } from './paginas/footer/footer.component';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { FooterComponent } from './paginas/footer/footer.component';
     GenericoModule,
     PaginasModule,
     SharedModule,
-    NgSelectModule
+    NgSelectModule,
+    ToastrModule
   ],
   providers: [],
   bootstrap: [AppComponent]
