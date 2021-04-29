@@ -4,7 +4,7 @@
 
         <!-- Page Content -->
         <div class="bg-pagina container ajuste correcao" >
-              <nav class="navbar navbar-light bg">
+              <nav class="navbar navbar-light bg" *ngIf="isShowMenu">
                 <div class="container-fluid">
                     <i class="fa fa-2x fa-bars cursor" style="color: white;" (click)='abrirMenu()'></i>
                 </div>
