@@ -10,9 +10,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { ImportarNotaFiscalComponent } from './paginas/importar-nota-fiscal/importar-nota-fiscal.component';
 
 const routes: Routes = [
-  {path:  'home', component : HomeComponent, canActivate : [GuardService]},
+  {path:  'home', component : ConsultarPedidoCompraComponent, canActivate : [GuardService]},
   {path:  'ConsultarPedidosCompra', component : ConsultarPedidoCompraComponent, canActivate : [GuardService]},
-  {path:  '', component : HomeComponent, canActivate : [GuardService]},  
+  {path:  '', component : ConsultarPedidoCompraComponent, canActivate : [GuardService]},  
   {path:  'Consultar-Titulos', component : ConsultaTitulosPagosComponent, canActivate : [GuardService]},
   {path:  'GerarPedidoCompra', component : GerarPedidoCompraComponent, canActivate : [GuardService]},
   {path:  'Atualizar-Tabela-Preco', component : ConsultaTabelaPrecoComponent, canActivate : [GuardService]},

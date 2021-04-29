@@ -5,8 +5,12 @@
     <div class="bg" id="sidebar-wrapper" *ngIf="isShowMenu" [ngClass]="{esconde: openMenu == 'open'}">
 
         <a routerLink="/home" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
-            <img class="m-4" src="../assets/images/u9.png" alt="logo do grupo gps" width="150" height="60">
+            <img class="mt-4 margL" src="../assets/images/u9.png" alt="logo do grupo gps" width="150" height="60">
         </a>
+        <div>
+            <p class="paragrafo"><i class="fa fa-user  "></i> Giovanni Guariento</p>
+            <p class="paragrafo"><i class="fa fa-building "></i> Grupo Gps</p>
+        </div>
         <div class="mt-5 list-group list-group-flush">
             <span class="m-3 pointer">
                 <button class="btn-toggle align-items-center rounded collapsed fontColor" data-bs-toggle="collapse"
