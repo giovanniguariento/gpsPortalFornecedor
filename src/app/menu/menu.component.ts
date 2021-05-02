@@ -33,9 +33,4 @@ export class MenuComponent implements OnInit {
       
   }
 
-  logout(){
-    localStorage.removeItem('userLogin')
-    this.router.navigate(['/auth/login'])
-  }
-
 }

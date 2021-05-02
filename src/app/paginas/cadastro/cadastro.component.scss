@@ -1,0 +1,18 @@
+.iconeSearch{
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    left: -25px;
+    &:hover { cursor: pointer; }
+}
+
+.card-header{
+    border-radius: 10px;
+}
+
+.linhaVertical {
+    height: 20px;
+    border-right: 1px solid black;
+}

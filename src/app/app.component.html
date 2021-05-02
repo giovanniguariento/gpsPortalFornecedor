@@ -7,7 +7,9 @@
               <nav class="navbar navbar-light bg" *ngIf="isShowMenu">
                 <div class="container-fluid">
                     <i class="fa fa-2x fa-bars cursor" style="color: white;" (click)='abrirMenu()'></i>
+                    <i class="fa fa-2x fa-sign-out cursor" style="color: white;" (click)='logout()'></i>
                 </div>
+                
               </nav>
             <router-outlet></router-outlet>
         </div>

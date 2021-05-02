@@ -12,6 +12,8 @@ import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { DetalhesCompraComponent } from '../detalhes-compra/detalhes-compra.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ImportarNotaFiscalComponent } from '../importar-nota-fiscal/importar-nota-fiscal.component';
+import { GenericoModule } from 'src/app/genericos/generico/generico.module';
+import { CadastroComponent } from '../cadastro/cadastro.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -26,12 +28,14 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     CarrinhoPageComponent,
     ConsultaTabelaPrecoComponent,
     DetalhesCompraComponent,
-    ImportarNotaFiscalComponent
+    ImportarNotaFiscalComponent,
+    CadastroComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     NgSelectModule,
+    GenericoModule,
     NgxMaskModule.forRoot(maskConfigFunction),
     ToastrModule.forRoot({ timeOut: 30000, preventDuplicates: true }),
 

@@ -1,6 +1,7 @@
 import { MenuService } from './services/menu.service';
 import { Component } from '@angular/core';
 import { AuthService } from './auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 
     
   
-    constructor( private menuService : MenuService , private authService : AuthService) { }
+    constructor( private menuService : MenuService , private authService : AuthService , private router: Router) { }
   
     ngOnInit() {
 
@@ -30,6 +31,11 @@ export class AppComponent {
 
       this.menuService.abrirMenu()
 
+    }
+
+    logout(){
+      localStorage.removeItem('userLogin')
+      this.router.navigate(['/auth/login'])
     }
   
   }

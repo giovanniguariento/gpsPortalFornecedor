@@ -9,6 +9,10 @@ export class ConsultarPedidoCompraComponent implements OnInit {
 
   public detalhesCompra = false;
 
+  public loading: boolean = false;
+  public alertSucesso: boolean = false;
+  public error: boolean = false;
+
 
   constructor() { }
 
@@ -23,5 +27,15 @@ export class ConsultarPedidoCompraComponent implements OnInit {
   fecharDetalhesCompra(evento: string) {
     this.detalhesCompra = false;
   }
+
+    // Fechar o alerta de sucesso, clicando no botão OK
+    fecharAlertSucesso(evento: string) {
+      this.alertSucesso = false;
+    }
+  
+    // Fechar o alerta de error, clicando no botão OK
+    fecharerror(evento: string) {
+      this.error = false;
+    }
 
 }

@@ -1,3 +1,4 @@
+import { CadastroComponent } from './paginas/cadastro/cadastro.component';
 import { ConsultaTabelaPrecoComponent } from './paginas/consulta-tabela-preco/consulta-tabela-preco.component';
 import { GerarPedidoCompraComponent } from './paginas/gerar-pedido-compra/gerar-pedido-compra.component';
 import { ConsultaTitulosPagosComponent } from './paginas/consulta-titulos-pagos/consulta-titulos-pagos.component';
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:  'GerarPedidoCompra', component : GerarPedidoCompraComponent, canActivate : [GuardService]},
   {path:  'Atualizar-Tabela-Preco', component : ConsultaTabelaPrecoComponent, canActivate : [GuardService]},
   {path:  'Importar-Nota-Fiscal', component : ImportarNotaFiscalComponent, canActivate : [GuardService]},
+  {path:  'Cadastro-de-Usuarios', component : CadastroComponent, canActivate : [GuardService]},
+
 
 
 
