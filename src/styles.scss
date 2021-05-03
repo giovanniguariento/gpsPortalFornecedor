@@ -239,4 +239,10 @@ overflow: auto;
   cursor: pointer;
 }
 
+.scroll{
+  height: 100%;
+  max-height: 500px; 
+  overflow-y : auto;
+}
+
 
