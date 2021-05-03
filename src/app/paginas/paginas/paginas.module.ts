@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ImportarNotaFiscalComponent } from '../importar-nota-fiscal/importar-nota-fiscal.component';
 import { GenericoModule } from 'src/app/genericos/generico/generico.module';
 import { CadastroComponent } from '../cadastro/cadastro.component';
+import { NovoUsuarioComponent } from '../novo-usuario/novo-usuario.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -29,7 +30,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ConsultaTabelaPrecoComponent,
     DetalhesCompraComponent,
     ImportarNotaFiscalComponent,
-    CadastroComponent
+    CadastroComponent,
+    NovoUsuarioComponent
   ],
   imports: [
     CommonModule,

@@ -200,3 +200,39 @@ overflow: auto;
   }
 }
 
+.titulo-ultimas-importacoes{
+  height: 27px;
+  left: 13.19%;
+  right: 54.46%;
+  top: 552.29px;
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 27px;
+  
+  color: var(--primary-color);
+  
+  }
+  
+  .paragrafo-card{
+    color: #282828; font-size: 14px; font-weight: 310; line-height: 21px; margin-bottom: 0px;
+}
+
+.botao-outline {
+  min-width: 122px;
+  width: auto;
+  background: none;
+  color: var(--primary-color);
+  padding: 7px 19px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  &:focus {
+    outline: none;
+  }
+}
+
+
