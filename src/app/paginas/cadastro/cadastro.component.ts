@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastroComponent implements OnInit {
 
   public novoUsuario = false;
+  public editarUsuario = false;
 
   accounts = [
     { name: 'Adam'},
@@ -27,6 +28,14 @@ export class CadastroComponent implements OnInit {
 
   fecharDetalhesCompra(evento: string) {
     this.novoUsuario = false;
+  }
+
+  public abrirEditarUsuario() {
+    this.editarUsuario = true;
+  }
+
+  fecharEditarUsuario(evento: string) {
+    this.editarUsuario = false;
   }
 
 }

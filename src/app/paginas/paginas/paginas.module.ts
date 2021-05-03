@@ -15,6 +15,7 @@ import { ImportarNotaFiscalComponent } from '../importar-nota-fiscal/importar-no
 import { GenericoModule } from 'src/app/genericos/generico/generico.module';
 import { CadastroComponent } from '../cadastro/cadastro.component';
 import { NovoUsuarioComponent } from '../novo-usuario/novo-usuario.component';
+import { EdicaoUsuarioComponent } from '../edicao-usuario/edicao-usuario.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -31,7 +32,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     DetalhesCompraComponent,
     ImportarNotaFiscalComponent,
     CadastroComponent,
-    NovoUsuarioComponent
+    NovoUsuarioComponent,
+    EdicaoUsuarioComponent
   ],
   imports: [
     CommonModule,

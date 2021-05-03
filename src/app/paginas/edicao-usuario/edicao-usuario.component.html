@@ -1,1 +1,140 @@
-<p>edicao-usuario works!</p>
+<div class="body-alert" *ngIf="editarUsuario === true">
+    <div class="tamanhoBox scroll">
+        <div class="row">
+            <div class="col-lg-10"></div>
+            <div class="col-lg-2 alinharDireita">
+                <button class="btn ml-5" (click)="fechar()">
+                    <i class="fa fa-times  fa-2x" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <h1 class="titulo-ultimas-importacoes">
+            Painel para Cadastro de Usuários.
+        </h1>
+        <h4 class="paragrafo-card mb-5">
+            Ferramenta para criação de Usuários.
+        </h4>
+        <hr>
+        <form [formGroup]="form">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5>Nome Completo:</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="nome"
+                                placeholder="Insira o seu nome" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Email:</h5>
+                        <div class="input-group">
+                            <input type="email" class="form-control" formControlName="email"
+                                placeholder="Insira o seu email" />
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Usuário</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="usuario"
+                                placeholder="Insira um nome de usuario" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4">
+                        <h5>Tipo de Acesso:</h5>
+                        <select class="form-select" aria-label="Default select example" formControlName="tipoAcesso">
+                            <option value="1">Padrão</option>
+                            <option value="2">Adm Fornecedor</option>
+                            <option value="3">Adm Gps</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Status:</h5>
+                        <select class="form-select" aria-label="Default select example" formControlName="status">
+                            <option value="1">Ativo</option>
+                            <option value="2">Inativo</option>
+                        </select>
+
+                    </div>
+                    <div class="col-lg-4">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                        <ng-container *ngIf="forca > 9 && forca < 30">
+                            <p class="ml-1 mt-2 ml-3">
+                                <img src="../../../assets/images/senhaFraca.png" alt="imagem forca fraca" />
+                                {{ senhaForca }}
+                            </p>
+                        </ng-container>
+                        <ng-container *ngIf="forca >= 30 && forca < 50">
+                            <p class="ml-1 mt-2 ml-3">
+                                <img src="../../../assets/images/senhaMedia.png" alt="imagem forca media" />
+                                {{ senhaForca }}
+                            </p>
+                        </ng-container>
+                        <ng-container *ngIf="forca >= 50">
+                            <p class="ml-1 mt-2 ml-3">
+                                <img src="../../../assets/images/senhaForte.png" alt="imagem forca forte" />
+                                {{ senhaForca }}
+                            </p>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <p>
+                            <strong class="negrito">{{ informarCaracter }}</strong>
+                        </p>
+                        <p>
+                            <strong class="negrito">{{ informarLetras }}</strong>
+                        </p>
+                        <p>
+                            <strong class="negrito">{{ informarNumeros }}</strong>
+                        </p>
+                        <ng-container *ngIf="
+                          informarCaracter == '' &&
+                          informarLetras == '' &&
+                          informarNumeros == ''
+                        ">
+                            <p class="descricaoSenha ml-3">
+                                Use <strong class="gpsColor">nove ou mais caracteres </strong> com
+                                uma combinação<br />
+                                de <strong class="gpsColor"> letras, números e símbolos.</strong>
+                            </p>
+                        </ng-container>
+                    </div>
+                    <div class="col-4">
+                        <p class="descricaoSenha ml-3">
+                            <strong class="vermelho"> {{ mensagemSenha }} </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-7"></div>
+            <div class="col-3 alinharDireita">
+                <button class="botao-outline" type="button" (click)='cancelar()'>CANCELAR</button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-dark btnGps" type="button"
+                    [ngClass]="{disabled: !form.valid || senhaForca == 'fraca' || confereSenha === false}">OK</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

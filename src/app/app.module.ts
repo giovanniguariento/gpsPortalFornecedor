@@ -14,12 +14,11 @@ import { FormsModule }   from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FooterComponent } from './paginas/footer/footer.component';
 import { ToastrModule } from 'ngx-toastr';
-import { EdicaoUsuarioComponent } from './paginas/edicao-usuario/edicao-usuario.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,    
-    MenuComponent, FooterComponent, EdicaoUsuarioComponent, ],
+    MenuComponent, FooterComponent, ],
   imports: [
     BrowserModule,
     AppRoutingModule,
