@@ -13,8 +13,12 @@
                     <div class="col-6">
                 <h5>Numero do Pedido</h5>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="inputSenha" />
+                    <input type="text" class="form-control" [(ngModel)]="numeroPedido"/>
+                    <button class="btn p-0 iconeSearch">
+                        <i class="fa fa-search c-black" id="iconeOlho" aria-hidden="true" (click)='buscarPedido()'></i>
+                    </button>
                 </div>
+                <p class="mt-2 paragrafo-card"  *ngIf='pedido'>{{pedido}}</p>
             </div>
                 </div>
                 <div class="row">
@@ -42,7 +46,7 @@
                     <div class="col-4 alinharDireita">
 
                     <button class="botao-outline" (click)="cancelarCapturaArquivo()" type="button">CANCELAR</button>
-                    <button class="btn btn-dark btnGps margL" (click)="postDados()" type="button" [ngClass]="{disabled: !checkArquivo}">ENVIAR</button>
+                    <button class="btn btn-dark btnGps margL" (click)="postDados()" type="button" [ngClass]="{disabled: !checkArquivo || !buscou}">ENVIAR</button>
                 </div>
 
                 </div>

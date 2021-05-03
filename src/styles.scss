@@ -261,4 +261,21 @@ overflow: auto;
   
 }
 
+.icone{
+  &:hover { cursor: pointer; color: #0F2533; }
+  border-radius: 8px;
+  z-index: 500;
+}
+
+.iconeSearch{
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1000 !important;
+  left: -25px;
+  &:hover { cursor: pointer; }
+}
+
+
 

@@ -18,16 +18,11 @@ export class ImportarNotaFiscalComponent implements OnInit {
   public checkArquivo: boolean = false;
   public empresa: any = localStorage.idEmpresaLogada;
 
+  public numeroPedido;
+  public pedido = '';
+  public buscou = false;
+
   public form: FormGroup;
-
-  public alertSucessoSubtitulo: any = 'Sucesso !';
-  public alertSucessoMensagem: any = 'Sucesso ao enviar arquivo.';
-
-  public alertErroSubtitulo: any = 'Erro ao enviar arquivo !';
-  public alertErroMensagem: string = '';
-
-  public erro: boolean = false;
-  public alertSucesso: boolean = false;
 
   public tipoArquivo: any;
 
@@ -38,6 +33,11 @@ export class ImportarNotaFiscalComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+  }
+
+  public buscarPedido(){
+    this.pedido = 'Pedido Numero: ' + this.numeroPedido + ' | Valor do Pedido : R$ 10.000';
+    this.buscou = true;
   }
 
   private createForm() {
@@ -77,6 +77,9 @@ export class ImportarNotaFiscalComponent implements OnInit {
 
   public cancelarCapturaArquivo() {
     this.checkArquivo = false;
+    this.buscou = false;
+    this.pedido = '';
+    this.numeroPedido = null;
 
     if (this.nomeArquivo != 'Selecionar arquivo') {
       this.Toastr.error('Arquivo excluido', '', {
