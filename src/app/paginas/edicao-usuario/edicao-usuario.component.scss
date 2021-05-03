@@ -5,18 +5,7 @@
   }
 
   .tamanhoBox {
-    width: 800px;
-    background: #FFFFFF; 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 20000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
-    padding: 12px 18px;
-    height: 550px; 
-    overflow-y : auto;
+    width: 800px !important;
     
   }
 
