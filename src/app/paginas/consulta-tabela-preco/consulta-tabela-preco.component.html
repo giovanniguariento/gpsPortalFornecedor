@@ -1,8 +1,12 @@
 <div class="m-5 cardPerson">
-  <div class="col-12 text-center">
+  <div class="col-12">
     <div class="mb-4">
-      <h1 class="titulo mb-5">Atualizar Tabela de Preço</h1>
-
+      <h1 class="titulo-ultimas-importacoes">
+        Consultar Tabela de Preço.
+      </h1>
+      <h4 class="paragrafo-card mb-5">
+        Ferramenta de Listagem e Atualização de tabela de preço.
+      </h4>
     </div>
   </div>
   <div class="row">
@@ -64,10 +68,10 @@
 
           <div id="collapseOnePreco" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body overFlow">
-              
+
               <table class="table">
                 <thead>
-                  <tr>                  
+                  <tr>
                     <th scope="col">Item</th>
                     <th scope="col">Produto</th>
                     <th scope="col">Descrição</th>
@@ -86,12 +90,14 @@
                     <td>xxxx</td>
                     <td>xxxx</td>
                     <td>xxxx</td>
-                    <td> <input class="form-control" type="text" prefix="R$ " mask="separator.2" thousandSeparator="."  />
+                    <td> <input class="form-control" type="text" prefix="R$ " mask="separator.2"
+                        thousandSeparator="." />
                     </td>
                     <td>
-                      <ng-select class="form-select" [items]="accounts" bindLabel="country" bindValue="name" style="width: 200px;"
-                      [(ngModel)]="localEntrega">
-                  </ng-select></td>
+                      <ng-select class="form-select" [items]="accounts" bindLabel="country" bindValue="name"
+                        style="width: 200px;" [(ngModel)]="localEntrega">
+                      </ng-select>
+                    </td>
                     <td></td>
 
                   </tr>
