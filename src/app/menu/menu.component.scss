@@ -17,9 +17,20 @@
 }
 
 .esconde {
-  margin-left: -15rem;
+  
+  transition: all 0.80s;
+  margin-left: -300px;
   
 }
+
+.mostra {
+  
+  transition: all 0.80s;
+  margin-left: 0px;
+  
+}
+
+
 
 .btn-toggle[aria-expanded="true"]::before {
     transform: rotate(

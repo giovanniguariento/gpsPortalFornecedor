@@ -29,15 +29,19 @@ export class ImportarNotaFiscalComponent implements OnInit {
   constructor(
     private Toastr: ToastrService,
     private formBuilder: FormBuilder,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.createForm();
   }
 
-  public buscarPedido(){
-    this.pedido = 'Pedido Numero: ' + this.numeroPedido + ' | Valor do Pedido : R$ 10.000';
-    this.buscou = true;
+  public buscarPedido() {
+
+    if(this.numeroPedido){
+      this.pedido = 'Pedido Numero: ' + this.numeroPedido + ' | Valor do Pedido : R$ 10.000';
+      this.buscou = true;
+    }
+
   }
 
   private createForm() {
@@ -57,7 +61,7 @@ export class ImportarNotaFiscalComponent implements OnInit {
       this.nomeArquivo = arquivo.name;
       this.comparador = arquivo.name.split('.');
       this.ultimo = this.comparador[this.comparador.length - 1];
-      if (this.ultimo == 'xls') {
+      if (this.ultimo == 'xml') {
         this.checkArquivo = true;
         this.Toastr.success(this.nomeArquivo + ' carregado com sucesso', '', {
           timeOut: 2000,

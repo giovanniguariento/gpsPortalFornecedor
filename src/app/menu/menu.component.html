@@ -2,7 +2,7 @@
 
     <!-- Sidebar -->
     
-    <div class="bg" id="sidebar-wrapper" *ngIf="isShowMenu" [ngClass]="{esconde: openMenu == 'open'}">
+    <div class="bg" id="sidebar-wrapper" *ngIf="isShowMenu" [ngClass]="{esconde: openMenu == 'open' , mostra: openMenu == 'close'}">
 
         <a routerLink="/home" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
             <img class="mt-4 margL" src="../assets/images/u9.png" alt="logo do grupo gps" width="150" height="60">
@@ -10,6 +10,7 @@
         <div>
             <p class="paragrafo"><i class="fa fa-user  "></i> Giovanni Guariento</p>
             <p class="paragrafo"><i class="fa fa-building "></i> Grupo Gps</p>
+            <p class="paragrafo"><i class="fa fa-address-card "></i> 97.165.605/0001-74</p>
         </div>
         <div class="mt-5 list-group list-group-flush">
             <span class="m-3 pointer">

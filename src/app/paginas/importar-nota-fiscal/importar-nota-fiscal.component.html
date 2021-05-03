@@ -9,11 +9,10 @@
 
                 <!-- Importador de arquivos, a parte que vai escolher o arquivo -->
                 <div class="row alinharEsquerda">
-                    <div class="col-3"></div>
-                    <div class="col-6">
-                <h5>Numero do Pedido</h5>
+                    <div class="col-4">
+                <h5>Número do Pedido:</h5>
                 <div class="input-group">
-                    <input type="text" class="form-control" [(ngModel)]="numeroPedido"/>
+                    <input type="text" class="form-control" [(ngModel)]="numeroPedido" placeholder="Digite o Número do Pedido"/>
                     <button class="btn p-0 iconeSearch">
                         <i class="fa fa-search c-black" id="iconeOlho" aria-hidden="true" (click)='buscarPedido()'></i>
                     </button>
@@ -22,8 +21,7 @@
             </div>
                 </div>
                 <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-6">
+                    <div class="col-8">
                 <div class="file-drop-area" [formGroup]="form">
                     <button class="botao-outline margL" >{{
                         nomeArquivo
@@ -31,9 +29,7 @@
                     <img src="../../../assets/images/upload-arquivo.png" alt="imagem de upload de arquivo" width="40px"
                         class="float-left mr-3 margL"  />
                     <span class="file-msg margL" >Arraste ou selecione seu arquivo <br />Formato
-                        <strong>.xls</strong>
-                        tamanho máximo
-                        <strong>10MB</strong></span>
+                        <strong>.xml</strong></span>
                     <input class="file-input" id="file" #inputFile type="file" accept=".xls"
                         (change)="capturarArquivo($event)" formControlName="file" />
 
@@ -42,7 +38,7 @@
             </div>
 
                 <div class="row">
-                    <div class="col-5"></div>
+                    <div class="col-4"></div>
                     <div class="col-4 alinharDireita">
 
                     <button class="botao-outline" (click)="cancelarCapturaArquivo()" type="button">CANCELAR</button>
