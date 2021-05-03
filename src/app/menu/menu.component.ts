@@ -22,12 +22,10 @@ export class MenuComponent implements OnInit {
       .subscribe(
         (data : any) => { this.isShowMenu = data; }
       );
-      console.log(localStorage.menu)
 
       this.menuService.emitirMenu.subscribe(
         (menu) => {
           this.openMenu = menu;
-          console.log(menu)
         }
       );
       
