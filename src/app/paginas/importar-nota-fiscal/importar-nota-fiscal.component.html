@@ -7,6 +7,71 @@
     </h4>
 
     <!-- Importador de arquivos, a parte que vai escolher o arquivo -->
+    <ng-container *ngIf="produtos.length > 0">
+    <div class="row mt-2 text-center">
+        <div class="col-lg-1 card-header  margL">
+            <div class="row mt-3">
+                Numero NT: {{numeroNotaFiscal}}
+            </div>
+        </div>
+        <div class="col-lg-1 card-header margL">
+            <div class="row mt-3">
+                Data Emissao: {{dataEmissao | date:'dd/MM/yyy'}}
+        </div>
+    </div>
+    <div class="col-lg-2 card-header margL">
+        <div class="row mt-3">
+            CNPJ do Emissor: {{cnpjEmissor}}
+    </div>
+</div>
+<div class="col-lg-2 card-header margL">
+    <div class="row mt-3">
+        Nome do Emissor: {{nomeEmissor}}
+</div>
+</div>
+<div class="col-lg-2 card-header margL">
+    <div class="row">
+        Nome do Destinatario: {{nomeDestinatario}}
+</div>
+</div>
+<div class="col-lg-2 card-header margL">
+    <div class="row mt-3">
+        CNPJ do Destinatario: {{cnpjDestinatario}}
+</div>
+</div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover mt-5" aria-describedby="table que lista os pedidos de compra">
+                <thead class="">
+                    <tr>
+                        <th class="tituloTable">Codigo do Produto</th>
+                        <th class="tituloTable">Nome do Produto</th>
+                        <th class="tituloTable">Unidade de Medida</th>
+                        <th class="tituloTable">Quantidade</th>
+                        <th class="tituloTable">Valor Unitario</th>
+                        <th class="tituloTable">Valor Total</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of produtos">
+                        <td class="text-nowrap">{{prod.PROD[0].CPROD[0]}}</td>
+                        <td class="text-nowrap">{{prod.PROD[0].XPROD[0]}}</td>
+                        <td class="text-nowrap">{{prod.PROD[0].UCOM[0]}}</td>
+                        <td class="text-nowrap">{{prod.PROD[0].QCOM[0]}}</td>
+                        <td class="text-nowrap">{{prod.PROD[0].VUNCOM[0]}}</td>
+                        <td class="text-nowrap">{{prod.PROD[0].VPROD[0]}}</td>
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
     <div class="row">
         <div class="col-8">
             <div class="file-drop-area" [formGroup]="form">
@@ -30,7 +95,7 @@
 
             <button class="botao-outline" (click)="cancelarCapturaArquivo()" type="button">CANCELAR</button>
             <button class="btn btn-dark btnGps margL" (click)="postDados()" type="button"
-                [ngClass]="{disabled: !checkArquivo || !buscou}">ENVIAR</button>
+                [ngClass]="{disabled: !checkArquivo}">ENVIAR</button>
         </div>
 
     </div>

@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import * as xml2js from 'xml2js';
 
 @Component({
   selector: 'app-importar-nota-fiscal',
@@ -11,12 +12,23 @@ export class ImportarNotaFiscalComponent implements OnInit {
   @ViewChild('inputFile', { static: true })
   public inputFile: ElementRef;
 
+  //mapeamento do xml
+  public numeroNotaFiscal;
+  public dataEmissao;
+  public cnpjEmissor;
+  public nomeEmissor;
+  public nomeDestinatario;
+  public cnpjDestinatario;
+  public produtos = [];
+
   public file = new FormData();
   public nomeArquivo: string = 'Selecionar arquivo';
   public comparador: any;
   public ultimo: any;
   public checkArquivo: boolean = false;
   public empresa: any = localStorage.idEmpresaLogada;
+
+  public showFile: any;
 
   public numeroPedido;
   public pedido = '';
@@ -25,6 +37,7 @@ export class ImportarNotaFiscalComponent implements OnInit {
   public form: FormGroup;
 
   public tipoArquivo: any;
+  xml: any;
 
   constructor(
     private Toastr: ToastrService,
@@ -35,14 +48,6 @@ export class ImportarNotaFiscalComponent implements OnInit {
     this.createForm();
   }
 
-  public buscarPedido() {
-
-    if(this.numeroPedido){
-      this.pedido = 'Pedido Numero: ' + this.numeroPedido + ' | Valor do Pedido : R$ 10.000';
-      this.buscou = true;
-    }
-
-  }
 
   private createForm() {
     this.form = this.formBuilder.group({
@@ -55,6 +60,11 @@ export class ImportarNotaFiscalComponent implements OnInit {
     this.nomeArquivo = 'Selecionar arquivo';
     if (event.target.files && event.target.files[0]) {
       const arquivo = event.target.files[0];
+      this.showFile = event.target.files[0];
+
+      //console.log ( this.file );
+
+      this.uploadDocument();
 
       this.file.append('file', arquivo);
 
@@ -81,9 +91,16 @@ export class ImportarNotaFiscalComponent implements OnInit {
 
   public cancelarCapturaArquivo() {
     this.checkArquivo = false;
-    this.buscou = false;
     this.pedido = '';
     this.numeroPedido = null;
+
+    this.numeroNotaFiscal = null;
+    this.dataEmissao = null
+    this.cnpjEmissor = null;
+    this.nomeEmissor = null;
+    this.nomeDestinatario = null;
+    this.cnpjDestinatario = null;
+    this.produtos = [];
 
     if (this.nomeArquivo != 'Selecionar arquivo') {
       this.Toastr.error('Arquivo excluido', '', {
@@ -99,5 +116,49 @@ export class ImportarNotaFiscalComponent implements OnInit {
     console.log(this.file)
 
   }
+
+
+  onFileChange(event) {
+    if (event.target.files.length > 0) {
+      this.showFile = event.target.files[0];
+
+      //console.log ( this.file );
+
+      this.uploadDocument();
+    }
+  }
+
+  uploadDocument() {
+
+    let fileReader = new FileReader();
+    fileReader.onload = e => {
+
+      let modelJson = this.convertStringToJson(fileReader.result);
+
+    };
+    fileReader.readAsText(this.showFile);
+  }
+
+  convertStringToJson(stringModel) {
+
+    const parser = new xml2js.Parser({ strict: false, trim: true });
+    parser.parseString(stringModel, (err, result) => {
+      this.xml = result;
+
+      if (this.xml.NFEPROC != null) {
+        this.numeroNotaFiscal = this.xml.NFEPROC.NFE[0].INFNFE[0].IDE[0].NNF[0];
+        this.dataEmissao = this.xml.NFEPROC.NFE[0].INFNFE[0].IDE[0].DHEMI[0]; //transformar data
+        this.cnpjEmissor = this.xml.NFEPROC.NFE[0].INFNFE[0].EMIT[0].CNPJ[0].replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3\/\$4\-\$5");
+        this.nomeEmissor = this.xml.NFEPROC.NFE[0].INFNFE[0].EMIT[0].XNOME[0];
+        this.nomeDestinatario = this.xml.NFEPROC.NFE[0].INFNFE[0].DEST[0].XNOME[0];
+        this.cnpjDestinatario = this.xml.NFEPROC.NFE[0].INFNFE[0].DEST[0].CNPJ[0].replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3\/\$4\-\$5");
+        this.produtos = this.xml.NFEPROC.NFE[0].INFNFE[0].DET;
+
+      }
+
+
+    });
+  }
+
 
 }
