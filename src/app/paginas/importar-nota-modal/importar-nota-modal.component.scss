@@ -1,0 +1,81 @@
+
+  .paragrafo-card{
+    color: #282828; font-size: 14px; font-weight: 310; line-height: 21px; margin-bottom: 0px;
+}
+
+// Design referente ao UPLOAD DE ARQUIVO (externo peguei do codepen, está no trello o link)
+.file-drop-area {
+    margin: 24px 0px 32px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 25px;
+    background: #0f25330e;
+    border: 1px dashed var(--primary-color);
+    border-radius: 3px;
+    transition: 0.2s;
+    &.is-active {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+        
+  .file-msg {
+    font-size: small;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary-color);
+  }
+  
+  .file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    &:focus {
+      outline: none;
+    }
+}
+
+.negrito{
+
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+
+color: #525457;
+}
+
+
+
+.botao-outline {
+    min-width: 122px;
+    width: auto;
+    background: none;
+    color: var(--primary-color);
+    padding: 7px 19px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .margL{
+    margin-left: 30px;
+  }
+
+  .show {
+    display:none
+  }

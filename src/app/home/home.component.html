@@ -4,10 +4,85 @@
 
 <app-error [error]="error" (alertFechou)="fecharerror($event)">
 </app-error>
-<div class="m-5 cardPerson">
-    <div class="col-12 text-center">
-        <div class="mb-4">
-            <h1 class="titulo mb-5">Portal do Fornecedor</h1>
+<div class="m-5 cardPerson text-center">
+    <div class="row">
+        <h1 class="titulo-ultimas-importacoes">
+            Portal do Fornecedor
+        </h1>
+        <h4 class="paragrafo-card mb-5">
+            Selecione um Atalho para o Menu Desejado
+        </h4>
+    </div>
+
+    <div class="col-12 ">
+        <div class="row mt-4">
+            <div class="col-1"></div>
+            <div class="col-2   ">
+                <div class="mb-4">
+                    <div class="card-atalho" routerLink="/ConsultarPedidosCompra">
+                        <h3 class="titulo-atalho">
+                            CONSULTAR PEDIDOS<br />DE COMPRA
+                        </h3>
+                        <img class="mb-2" src="../../assets/images/dados.png" alt="imagem de dados" width="44px" />
+                        <p class="descricao-atalho">
+                            Ferramenta de Listagem dos Pedidos de Compra
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2   ">
+                <div class="mb-4">
+                    <div class="card-atalho" routerLink="/Atualizar-Tabela-Preco">
+                        <h3 class="titulo-atalho">
+                            ATUALIZAR TABELA<br />DE PREÇO
+                        </h3>
+                        <img class="mb-2" src="../../assets/images/dados.png" alt="imagem de dados" width="44px" />
+                        <p class="descricao-atalho">
+                            Ferramenta de Listagem e Atualização de tabela de preço 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2   ">
+                <div class="mb-4">
+                    <div class="card-atalho" routerLink="/Consultar-Titulos">
+                        <h3 class="titulo-atalho">
+                            CONSULTAR TÍTULOS<br />PAGOS
+                        </h3>
+                        <img class="mb-2" src="../../assets/images/dados.png" alt="imagem de dados" width="44px" />
+                        <p class="descricao-atalho">
+                            Ferramenta de Listagem dos Titulos pagos
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2   ">
+                <div class="mb-4">
+                    <div class="card-atalho" routerLink="/ConsultarPedidosCompra">
+                        <h3 class="titulo-atalho">
+                            IMPORTAR<br />NOTA FISCAL
+                        </h3>
+                        <img class="mb-2" src="../../assets/images/dados.png" alt="imagem de dados" width="44px" />
+                        <p class="descricao-atalho">
+                            Ferramenta para importação de notas fiscais
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2   ">
+                <div class="mb-4">
+                    <div class="card-atalho" routerLink="/ConsultarPedidosCompra">
+                        <h3 class="titulo-atalho">
+                            CADASTRO DE<br />USUÁRIOS
+                        </h3>
+                        <img class="mb-2" src="../../assets/images/dados.png" alt="imagem de dados" width="44px" />
+                        <p class="descricao-atalho">
+                            Ferramenta que Lista os Usuários do Portal
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>

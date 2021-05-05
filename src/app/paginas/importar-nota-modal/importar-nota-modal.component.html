@@ -1,0 +1,47 @@
+<div class="body-alert" [ngClass]="{show: importarNota === false}">
+    <div class="tamanhoBox scroll">
+        <div class="row">
+            <div class="col-lg-10"></div>
+            <div class="col-lg-2 alinharDireita">
+                <button class="btn ml-5" (click)="fechar()">
+                    <i class="fa fa-times  fa-2x" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <h1 class="titulo-ultimas-importacoes">
+            Importação de Nota Fiscal
+        </h1>
+        <h4 class="paragrafo-card mb-3">
+            Importe a Nota Fiscal Referente ao Pedido Selecionado
+        </h4>
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="file-drop-area" [formGroup]="form">
+                    <button class="botao-outline margL">{{
+                        nomeArquivo
+                        }}</button>
+                    <img src="../../../assets/images/upload-arquivo.png" alt="imagem de upload de arquivo" width="40px"
+                        class="float-left mr-3 margL" />
+                    <span class="file-msg margL">Arraste ou selecione<br /> seu arquivo. <br />Formato
+                        <strong>.xml</strong></span>
+                    <input class="file-input" id="file" #inputFile type="file" accept=".xml"
+                        (change)="capturarArquivo($event)" formControlName="file" />
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8 alinharDireita">
+
+                <button class="botao-outline" (click)="cancelarCapturaArquivo()" type="button">CANCELAR</button>
+                <button class="btn btn-dark btnGps margL" (click)="postDados()" type="button"
+                    [ngClass]="{disabled: !checkArquivo}">ENVIAR</button>
+            </div>
+
+        </div>
+    </div>
+</div>

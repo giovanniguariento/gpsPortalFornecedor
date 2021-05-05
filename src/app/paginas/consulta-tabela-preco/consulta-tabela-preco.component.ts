@@ -9,6 +9,7 @@ export class ConsultaTabelaPrecoComponent implements OnInit {
 
   public cnpj;
   public tabelaPreco;
+  public dataVigencia = '13/08/1997';
 
   accounts = [
     { name: 'Adam', email: 'adam@email.com', age: 12, country: 'Aberto' },

@@ -1,3 +1,5 @@
+<app-importar-nota-modal [importarNota]="importarNota" (alertFechou)="fecharImportarNota($event)"></app-importar-nota-modal>
+
 <div class="m-5 cardPerson">
     <div class="col-12">
         <div>
@@ -7,8 +9,8 @@
             <h4 class="paragrafo-card">
                 Ferramenta de Listagem dos Titulos pagos
             </h4>
-            <div class="row">
-                <div class="col-lg-10 text-center">
+            <div class="row text-center">
+                <div class="col-lg-10 ">
                     <table class="table table-hover mt-5" aria-describedby="table que lista os pedidos de compra">
                         <thead class="">
                             <tr>
@@ -24,6 +26,8 @@
                                 <th class="tituloTable">Status</th>
                                 <th class="tituloTable">Data de Pagamento</th>
                                 <th class="tituloTable"></th>
+                                <th class="tituloTable"></th>
+
 
                             </tr>
                         </thead>
@@ -40,7 +44,9 @@
                                 <td class="text-nowrap">1234</td>
                                 <td class="text-nowrap">Aberto</td>
                                 <td class="text-nowrap">01/04/2021</td>
-                                <td class="text-nowrap"><i class="fa fa-search cursor"></i></td>
+                                <td class="text-nowrap"><i title="Visualizar Arquivo PDF" class="fa fa-file cursor"></i></td>
+                                <td class="text-nowrap"><i (click)='abrirImportarNota()' title="Fazer Upload da Nota"  class="fa fa-upload cursor"></i></td>
+
 
                             </tr>
                         </tbody>

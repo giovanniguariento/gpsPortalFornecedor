@@ -1,0 +1,28 @@
+.card-atalho{
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 8px;
+    padding: 30px 6px;
+    text-align: center;
+    transition: 0.3s all;
+    &:hover{ cursor: pointer; box-shadow: 0px 0px 5px 1px #0a0a0a20; background: #fdfdfd;}
+}
+
+.titulo-atalho{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.descricao-atalho{
+    font-weight: 330;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #282828;
+    opacity: 0.7;
+}

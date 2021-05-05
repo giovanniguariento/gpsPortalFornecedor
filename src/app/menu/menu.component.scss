@@ -117,6 +117,25 @@
 }
 
 
+.teste {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #0F2533;
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
 
-
-
+.teste:hover, .active {
+  color:#0F2533;
+  background-color:white!important;
+}

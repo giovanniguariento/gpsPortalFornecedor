@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaTitulosPagosComponent implements OnInit {
 
+  public importarNota = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public abrirImportarNota() {
+    this.importarNota = true;
+  }
+
+  fecharImportarNota(evento: string) {
+    this.importarNota = false;
   }
 
 }
