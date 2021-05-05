@@ -34,6 +34,7 @@ export class AppComponent {
     }
 
     logout(){
+      localStorage.removeItem('menu')
       localStorage.removeItem('userLogin')
       this.router.navigate(['/auth/login'])
     }

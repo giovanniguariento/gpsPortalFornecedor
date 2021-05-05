@@ -27,7 +27,10 @@ export class MenuComponent implements OnInit {
         (menu) => {
           this.openMenu = menu;
         }
-      );
-      
+      );   
+  }
+
+  public abrirMenu(){
+    this.menuService.abrirMenu()
   }
 }

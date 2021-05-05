@@ -2,65 +2,26 @@
 
     <!-- Sidebar -->
     
-    <div class="bg" id="sidebar-wrapper" *ngIf="isShowMenu" [ngClass]="{esconde: openMenu == 'open' , mostra: openMenu == 'close'}">
+    <div class="bg" id="sidebar-wrapper" *ngIf="isShowMenu" [ngClass]="{esconde: openMenu == 'close' , mostra: openMenu == 'open'}">
 
-        <a routerLink="/home" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
-            <img class="mt-4 margL" src="../assets/images/u9.png" alt="logo do grupo gps" width="150" height="60">
+        <a (click)='abrirMenu()' routerLink="/home" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
+            <img class="mt-5 margL" src="../assets/images/u9.png" alt="logo do grupo gps" width="150" height="60">
         </a>
+        <hr class="corLinha mt-5">
+
         <div>
             <p class="paragrafo"><i class="fa fa-user  "></i> Giovanni Guariento</p>
             <p class="paragrafo"><i class="fa fa-building "></i> Grupo Gps</p>
             <p class="paragrafo"><i class="fa fa-address-card "></i> 97.165.605/0001-74</p>
         </div>
-        <div class="mt-4 list-group list-group-flush">
-            <span class="m-3 pointer">
-                <button class="btn-toggle align-items-center rounded collapsed fontColor" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse" aria-expanded="false">
-                    Pedidos de Compra
-                </button>
-                <div class="collapse" id="home-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a routerLink="/ConsultarPedidosCompra" class="link-dark rounded fontColor">Consultar Pedidos de
-                                Compra</a></li>
-                    </ul>
-                </div>
-            </span>
-            <span class="m-3 pointer mt-5">
-                <button class="btn-toggle align-items-center rounded collapsed fontColor" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse1" aria-expanded="false">
-                    Tabela de Preço
-                </button>
-                <div class="collapse" id="home-collapse1">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a routerLink="/Atualizar-Tabela-Preco" class="link-dark rounded fontColor">Atualizar Tabela Preço</a></li>
-                    </ul>
-                </div>
-            </span>
-            <span class="m-3 pointer mt-5">
-                <button class="btn-toggle align-items-center rounded collapsed fontColor" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse2" aria-expanded="false">
-                    Financeiro
-                </button>
-                <div class="collapse" id="home-collapse2">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a routerLink="/Consultar-Titulos" class="link-dark rounded fontColor">Consultar Títulos</a></li>
-                        <li><a routerLink="/Importar-Nota-Fiscal" class="link-dark rounded fontColor">Importar Nota Fiscal</a></li>
+        <hr class="corLinha">
+        <div class="mt-4 list-group list-group-flush mt-5 ">
+        <a class="teste" routerLink="/ConsultarPedidosCompra"><i class="fa fa-2x fa-dollar margemIco"></i> Pedidos de Compra</a>
+        <a class="teste" routerLink="/Atualizar-Tabela-Preco"><i class="fa fa-2x fa-table margemIco "></i> Atualizar Tabela Preço</a>
+        <a class="teste" routerLink="/Consultar-Titulos"><i class="fa fa-2x fa-clipboard margemIco"></i> Consultar Títulos</a>
+        <a class="teste" routerLink="/Importar-Nota-Fiscal"><i class="fa fa-2x fa-cloud-upload margemIco"></i> Importar Nota Fiscal</a>
+        <a class="teste" routerLink="/Cadastro-de-Usuarios"><i class="fa fa-2x fa-user-plus margemIco"></i> Cadastro de Usuarios</a>
 
-                    </ul>
-                </div>
-            </span>
-            <span class="m-3 pointer mt-5">
-                <button class="btn-toggle align-items-center rounded collapsed fontColor" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse3" aria-expanded="false">
-                    Cadastro
-                </button>
-                <div class="collapse" id="home-collapse3">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a routerLink="/Cadastro-de-Usuarios" class="link-dark rounded fontColor">Cadastro de Usuarios</a></li>
-                    </ul>
-                </div>
-            </span>
-            <!-- <a class="teste">About</a> -->
         </div>
     </div>
 

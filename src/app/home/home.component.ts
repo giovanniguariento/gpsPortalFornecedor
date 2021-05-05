@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   public error: boolean = false;
 
 
-  constructor() { }
+  constructor( private menuService : MenuService) { }
 
   ngOnInit() {
   }
@@ -25,6 +26,10 @@ export class HomeComponent implements OnInit {
   // Fechar o alerta de error, clicando no botão OK
   fecharerror(evento: string) {
     this.error = false;
+  }
+
+  public abrirMenu(){
+    this.menuService.abrirMenu()
   }
 
 }

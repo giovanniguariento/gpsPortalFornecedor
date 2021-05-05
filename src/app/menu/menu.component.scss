@@ -2,6 +2,8 @@
 
 #sidebar-wrapper {
   min-height: 180%;
+  margin-left: -300px;
+
 }
 
 
@@ -26,7 +28,7 @@
 .mostra {
   
   transition: all 0.80s;
-  margin-left: 0px;
+  margin-left: 0px !important;
   
 }
 
@@ -116,26 +118,30 @@
   z-index: 500;
 }
 
-
 .teste {
   padding: 10px;
-  font-size: 1.1em;
-  display: block;
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
+  font-size: 1em;
   background: #0F2533;
-  text-align: center;
-  font-size: 0.9em !important;
   display: block;
-  border-radius: 5px;
-  margin-bottom: 5px;
+  border-radius: 1px;
+  margin-bottom: 10px;
   color: white;
   text-decoration: none;
-  transition: all 0.3s;
   cursor: pointer;
+  height: 80px;
 }
 
 .teste:hover, .active {
   color:#0F2533;
   background-color:white!important;
+}
+
+.margemIco{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.corLinha{
+color: white;
 }
