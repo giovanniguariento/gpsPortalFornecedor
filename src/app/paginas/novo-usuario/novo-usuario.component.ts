@@ -39,11 +39,11 @@ export class NovoUsuarioComponent implements OnInit {
       tipoAcesso: ['1', [Validators.required]],
       senha: [null, [Validators.required]],
       confirmarSenha: [null, [Validators.required]],
-        });
+    });
   }
 
-  fechar() { 
-    this.alertFechou.emit('Fechou'); 
+  fechar() {
+    this.alertFechou.emit('Fechou');
   }
 
   public forcaSenha() {
@@ -147,7 +147,7 @@ export class NovoUsuarioComponent implements OnInit {
     }
   }
 
-    
+
   revelaEscondeSenha() {
     const inputSenha = document.querySelector('#inputSenha1') as HTMLInputElement;
     const iconeOlho = document.querySelector('#iconeOlho1') as HTMLInputElement;
@@ -178,7 +178,11 @@ export class NovoUsuarioComponent implements OnInit {
     }
   }
 
-  public cancelar(){
+  public cancelar() {
+    this.informarCaracter = '';
+    this.informarLetras = '';
+    this.informarNumeros = '';
+    this.forca = 0;
     this.form.reset();
     this.alertFechou.emit('Fechou');
   }
