@@ -7,7 +7,7 @@
     </h4>
 
     <!-- Importador de arquivos, a parte que vai escolher o arquivo -->
-    <ng-container *ngIf="produtos.length > 0">
+    <ng-container *ngIf="xml">
 
         <div class="text-center mt-5">
             <ul class="list-group list-group-horizontal-sm">
@@ -19,11 +19,13 @@
                 <li class="list-group-item">CNPJ do Destinatario: {{cnpjDestinatario}}</li>
               </ul>
         </div>
+    </ng-container>
 
-
+    <!-- table de produtos -->
+        <ng-container *ngIf="produtos && xml">
     <div class="row">
         <div class="col">
-            <table class="table table-hover mt-3" aria-describedby="table que lista os pedidos de compra">
+            <table class="table table-hover mt-3">
                 <thead class="">
                     <tr>
                         <th class="tituloTable">Codigo do Produto</th>
@@ -45,6 +47,34 @@
                         <td class="text-nowrap">{{prod.PROD[0].QCOM[0]}}</td>
                         <td class="text-nowrap">{{prod.PROD[0].VUNCOM[0]}}</td>
                         <td class="text-nowrap">{{prod.PROD[0].VPROD[0]}}</td>
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+    <!-- table de servicos do rio -->
+
+<ng-container *ngIf="produtosServRio && xml">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover mt-3">
+                <thead class="">
+                    <tr>
+                        <th class="tituloTable">Descrição do Serviço</th>
+                        <th class="tituloTable">Valor Total</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of produtosServRio">
+                        <td class="text-nowrap">{{prod.DISCRIMINACAO}}</td>
+                        <td class="text-nowrap">R$ {{prod.VALORES[0].VALORSERVICOS}}</td>
 
                         
                     </tr>

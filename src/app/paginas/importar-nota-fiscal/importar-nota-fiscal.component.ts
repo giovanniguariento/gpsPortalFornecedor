@@ -19,7 +19,8 @@ export class ImportarNotaFiscalComponent implements OnInit {
   public nomeEmissor;
   public nomeDestinatario;
   public cnpjDestinatario;
-  public produtos = [];
+  public produtos;
+  public produtosServRio;
 
   public file = new FormData();
   public nomeArquivo: string = 'Selecionar arquivo';
@@ -94,13 +95,15 @@ export class ImportarNotaFiscalComponent implements OnInit {
     this.pedido = '';
     this.numeroPedido = null;
 
+    this.produtosServRio = null;
+    this.xml = null;
     this.numeroNotaFiscal = null;
     this.dataEmissao = null
     this.cnpjEmissor = null;
     this.nomeEmissor = null;
     this.nomeDestinatario = null;
     this.cnpjDestinatario = null;
-    this.produtos = [];
+    this.produtos = null;
 
     if (this.nomeArquivo != 'Selecionar arquivo') {
       this.Toastr.error('Arquivo excluido', '', {
@@ -145,6 +148,8 @@ export class ImportarNotaFiscalComponent implements OnInit {
     parser.parseString(stringModel, (err, result) => {
       this.xml = result;
 
+
+      //produtos
       if (this.xml.NFEPROC != null) {
         this.numeroNotaFiscal = this.xml.NFEPROC.NFE[0].INFNFE[0].IDE[0].NNF[0];
         this.dataEmissao = this.xml.NFEPROC.NFE[0].INFNFE[0].IDE[0].DHEMI[0]; //transformar data
@@ -155,6 +160,18 @@ export class ImportarNotaFiscalComponent implements OnInit {
         this.produtos = this.xml.NFEPROC.NFE[0].INFNFE[0].DET;
 
       }
+
+      //rio de janeiro servicos
+      if(this.xml.INFRPS != null){
+        this.numeroNotaFiscal = this.xml.INFRPS.IDENTIFICACAORPS[0].NUMERO[0]; 
+        this.dataEmissao = this.xml.INFRPS.DATAEMISSAO[0]; //transformar data
+        this.cnpjEmissor = this.xml.INFRPS.PRESTADOR[0].CNPJ[0].replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3\/\$4\-\$5");
+        this.nomeDestinatario = this.xml.INFRPS.TOMADOR[0].RAZAOSOCIAL[0];
+        this.cnpjDestinatario = this.xml.INFRPS.TOMADOR[0].IDENTIFICACAOTOMADOR[0].CPFCNPJ[0].CNPJ[0].replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3\/\$4\-\$5");
+        this.produtosServRio = this.xml.INFRPS.SERVICO;
+      }
+
+      
 
 
     });
