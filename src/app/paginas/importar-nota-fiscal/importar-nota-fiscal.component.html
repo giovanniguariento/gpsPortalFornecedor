@@ -13,10 +13,10 @@
             <ul class="list-group list-group-horizontal-sm">
                 <li class="list-group-item">Numero NT: {{numeroNotaFiscal}}</li>
                 <li class="list-group-item">Data Emissao: {{dataEmissao | date:'dd/MM/yyy'}}</li>
-                <li class="list-group-item">CNPJ do Emissor: {{cnpjEmissor}}</li>
+                <li class="list-group-item">CNPJ do Emissor: {{cnpjEmissor | cnpj}}</li>
                 <li class="list-group-item">Nome do Emissor: {{nomeEmissor}}</li>
                 <li class="list-group-item">Nome do Destinatario: {{nomeDestinatario}}</li>
-                <li class="list-group-item">CNPJ do Destinatario: {{cnpjDestinatario}}</li>
+                <li class="list-group-item">CNPJ do Destinatario: {{cnpjDestinatario | cnpj}}</li>
               </ul>
         </div>
     </ng-container>

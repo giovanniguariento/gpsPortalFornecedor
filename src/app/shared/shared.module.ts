@@ -4,11 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PopoverModule } from 'ngx-smart-popover';
+import { CnpjPipe } from '../pipes/cnpj.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CnpjPipe
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -21,7 +24,8 @@ import { PopoverModule } from 'ngx-smart-popover';
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-    PopoverModule
+    PopoverModule,
+    CnpjPipe
     
   ]
 })
