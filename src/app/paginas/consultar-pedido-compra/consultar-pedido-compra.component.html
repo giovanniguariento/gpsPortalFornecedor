@@ -37,7 +37,7 @@
                                 <th class="tituloTable ">CNPJ do Fornecedor</th>
                                 <th class="tituloTable">CNPJ da GPS</th>
                                 <th class="tituloTable">Nome da GPS</th>
-                                <th class="tituloTable">Numero do Pedido </th>
+                                <th class="tituloTable ">Numero do Pedido </th>
                                 <th class="tituloTable">Data de Emissão</th>
                                 <th class="tituloTable">Data de Entrega</th>
                                 <th class="tituloTable">Valor do Pedido </th>
@@ -53,10 +53,10 @@
                         <tbody>
                             <tr *ngFor="let teste of accounts | filter : term ">
                                 <td class="text-nowrap"><i class="fa fa-plus-square icone" (click)='abrirDetalhesCompra()'></i></td>
-                                <td class="text-nowrap">01/04/2021</td>
+                                <td class="text-nowrap">{{teste.cnpjForn}}</td>
                                 <td class="text-nowrap">{{teste.cnpj}}</td>
-                                <td class="text-nowrap">In-Haus - Inteligência em Logística</td>
-                                <td class="text-nowrap">123456789</td>
+                                <td class="text-nowrap">{{teste.nomeGps}}</td>
+                                <td class="text-nowrap">{{teste.numeroPed}}</td>
                                 <td class="text-nowrap">123456789</td>
                                 <td class="text-nowrap">123456789</td>
                                 <td class="text-nowrap">123456789</td>
