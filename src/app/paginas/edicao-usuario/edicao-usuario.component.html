@@ -1,4 +1,4 @@
-<div class="body-alert" *ngIf="editarUsuario === true">
+<div class="body-alert" (click)='clickClose($event)' *ngIf="editarUsuario === true">
     <div class="tamanhoBox scroll">
         <div class="row">
             <div class="col-lg-10"></div>

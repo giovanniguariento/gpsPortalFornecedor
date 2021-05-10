@@ -22,6 +22,16 @@ export class EdicaoUsuarioComponent implements OnInit {
 
   }
 
+  clickClose(event) {
+    let classClose = event.target.className.split(' ');
+    event.target
+
+    if (classClose[0] == 'body-alert') {
+      this.fechar();
+    }
+  }
+
+
   private createForm() {
     this.form = this.formBuilder.group({
       nome: [null, [Validators.required]],
@@ -29,14 +39,14 @@ export class EdicaoUsuarioComponent implements OnInit {
       usuario: [null, [Validators.required]],
       tipoAcesso: ['1', [Validators.required]],
       status: ['1', [Validators.required]],
-        });
+    });
   }
 
-  fechar() { 
-    this.alertFechou.emit('Fechou'); 
+  fechar() {
+    this.alertFechou.emit('Fechou');
   }
 
-  public cancelar(){
+  public cancelar() {
     this.alertFechou.emit('Fechou');
   }
 

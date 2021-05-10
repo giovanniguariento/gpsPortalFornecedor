@@ -31,6 +31,15 @@ export class NovoUsuarioComponent implements OnInit {
 
   }
 
+  clickClose(event) {
+    let classClose = event.target.className.split(' ');
+    event.target
+
+    if (classClose[0] == 'body-alert') {
+      this.fechar();
+    }
+  }
+
   private createForm() {
     this.form = this.formBuilder.group({
       nome: [null, [Validators.required]],

@@ -10,12 +10,21 @@ export class DetalhesCompraComponent implements OnInit {
   @Input() detalhesCompra: boolean = true;
   @Output() alertFechou = new EventEmitter();
 
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  fechar() { this.alertFechou.emit('Fechou'); }
+  clickClose(event) {
+    let classClose = event.target.className.split(' ');
+    event.target
+    
+    if( classClose[0] == 'body-alert'){
+      this.fechar();
+    }
+}
+
+  fechar() { 
+    this.alertFechou.emit('Fechou'); }
 
 }

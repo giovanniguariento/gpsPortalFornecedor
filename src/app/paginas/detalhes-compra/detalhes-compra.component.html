@@ -1,5 +1,5 @@
-<div class="body-alert" *ngIf="detalhesCompra === true">
-    <div class="tamanhoBox scroll text-center">
+<div class="body-alert" (click)='clickClose($event)' *ngIf="detalhesCompra === true">
+    <div class="tamanhoBox scroll text-center" >
       <div class="row">
         <div class="col-lg-10"></div>
         <div class="col-lg-2 alinharDireita">
