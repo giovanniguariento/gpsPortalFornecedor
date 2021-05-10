@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-consultar-pedido-compra',
@@ -13,10 +14,18 @@ export class ConsultarPedidoCompraComponent implements OnInit {
   public alertSucesso: boolean = false;
   public error: boolean = false;
 
+  public ajuste = 'open';
 
-  constructor() { }
+  constructor( private menuService : MenuService) { }
 
   ngOnInit() {
+
+    this.menuService.emitirMenu.subscribe(
+      (menu) => {
+        this.ajuste = menu;
+      }
+    );  
+    
   }
 
   public abrirDetalhesCompra() {
