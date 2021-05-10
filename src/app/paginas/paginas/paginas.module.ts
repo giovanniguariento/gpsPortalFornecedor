@@ -17,6 +17,7 @@ import { CadastroComponent } from '../cadastro/cadastro.component';
 import { NovoUsuarioComponent } from '../novo-usuario/novo-usuario.component';
 import { EdicaoUsuarioComponent } from '../edicao-usuario/edicao-usuario.component';
 import { ImportarNotaModalComponent } from '../importar-nota-modal/importar-nota-modal.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -44,6 +45,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     GenericoModule,
     NgxMaskModule.forRoot(maskConfigFunction),
     ToastrModule.forRoot({ timeOut: 30000, preventDuplicates: true }),
+    Ng2SearchPipeModule
+    
 
   ],
   exports : [

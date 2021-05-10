@@ -16,6 +16,8 @@ export class ConsultarPedidoCompraComponent implements OnInit {
 
   public ajuste = 'open';
 
+  accounts = [1,2,3,4,5,6,7];
+
   constructor( private menuService : MenuService) { }
 
   ngOnInit() {

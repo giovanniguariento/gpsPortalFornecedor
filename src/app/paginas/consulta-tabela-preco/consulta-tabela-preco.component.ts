@@ -11,16 +11,32 @@ export class ConsultaTabelaPrecoComponent implements OnInit {
   public tabelaPreco;
   public dataVigencia = '13/08/1997';
 
+  public filterResouce: any = [];
+
+  public term: any;
+  
+  public searchTextFilterUsers = [];
+
   accounts = [
-    { name: 'Adam', email: 'adam@email.com', age: 12, country: 'Aberto' },
-    { name: 'Samantha', email: 'samantha@email.com', age: 30, country: 'Processado' },
-    { name: 'Amalie', email: 'amalie@email.com', age: 12, country: 'Negado' },
+    { name: 'Adam', tabelaPreco: '50126', loja: 12, status: 'Vigente' },
+    { name: 'Samantha', tabelaPreco: '13526', loja: 30, status: 'Vigente' },
+    { name: 'Amalie', tabelaPreco: '75820', loja: 52, status: 'Vencido' },
   ];
 
 
   constructor() { }
 
   ngOnInit() {
+    // for (let i = 0; i < this.accounts.length; i++) {
+
+    //   this.accounts[i].name;
+    // }
   }
+
+  public searchUserFilter() {
+
+    this.searchTextFilterUsers = this.term;
+
+}
 
 }
