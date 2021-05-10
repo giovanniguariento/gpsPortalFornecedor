@@ -21,7 +21,7 @@
                 <div class="col-4">
                     <h5>Procure por Pedidos</h5>
                     <div class="input-group alinharEsquerda">
-                        <input [(ngModel)]="centroCusto" type="text" class="form-control" id="inputSenha" />
+                        <input [(ngModel)]="term" type="text" class="form-control" id="inputSenha" (keyup)="searchUserFilter()" />
                         <button class="btn p-0 iconeSearch">
                             <i class="fa fa-search c-black" id="iconeOlho" aria-hidden="true"></i>
                         </button>
@@ -51,10 +51,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let teste of accounts">
+                            <tr *ngFor="let teste of accounts | filter : term ">
                                 <td class="text-nowrap"><i class="fa fa-plus-square icone" (click)='abrirDetalhesCompra()'></i></td>
                                 <td class="text-nowrap">01/04/2021</td>
-                                <td class="text-nowrap">123456789</td>
+                                <td class="text-nowrap">{{teste.cnpj}}</td>
                                 <td class="text-nowrap">In-Haus - Inteligência em Logística</td>
                                 <td class="text-nowrap">123456789</td>
                                 <td class="text-nowrap">123456789</td>

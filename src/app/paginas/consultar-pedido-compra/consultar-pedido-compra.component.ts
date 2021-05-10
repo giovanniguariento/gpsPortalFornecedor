@@ -15,9 +15,16 @@ export class ConsultarPedidoCompraComponent implements OnInit {
   public error: boolean = false;
 
   public ajuste = 'open';
+  
+  public filterResouce: any = [];
+  public term: any;
+  public searchTextFilterUsers = [];
 
-  accounts = [1,2,3,4,5,6,7];
-
+  accounts = [
+    { name: 'Adam', cnpj: '13.235.417/0001-85', loja: 12, status: 'Vigente' },
+    { name: 'Samantha', cnpj: '97.587.031/0001-22', loja: 30, status: 'Vigente' },
+    { name: 'Amalie', cnpj: '82.163.747/0001-25', loja: 52, status: 'Vencido' },
+  ];
   constructor( private menuService : MenuService) { }
 
   ngOnInit() {
@@ -29,6 +36,12 @@ export class ConsultarPedidoCompraComponent implements OnInit {
     );  
     
   }
+
+  public searchUserFilter() {
+
+    this.searchTextFilterUsers = this.term;
+
+}
 
   public abrirDetalhesCompra() {
     this.detalhesCompra = true;

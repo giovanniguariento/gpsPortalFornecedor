@@ -12,9 +12,7 @@ export class ConsultaTabelaPrecoComponent implements OnInit {
   public dataVigencia = '13/08/1997';
 
   public filterResouce: any = [];
-
   public term: any;
-  
   public searchTextFilterUsers = [];
 
   accounts = [
