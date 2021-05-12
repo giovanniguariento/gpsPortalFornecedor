@@ -19,11 +19,7 @@ import { EdicaoUsuarioComponent } from '../edicao-usuario/edicao-usuario.compone
 import { ImportarNotaModalComponent } from '../importar-nota-modal/importar-nota-modal.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
-const maskConfigFunction: () => Partial<IConfig> = () => {
-  return {
-    validation: false,
-  };
-};@NgModule({
+@NgModule({
   declarations: [
     ConsultarPedidoCompraComponent , 
     ConsultaTitulosPagosComponent,
@@ -43,7 +39,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     SharedModule,
     NgSelectModule,
     GenericoModule,
-    NgxMaskModule.forRoot(maskConfigFunction),
+    NgxMaskModule.forRoot(),
     ToastrModule.forRoot({ timeOut: 30000, preventDuplicates: true }),
     Ng2SearchPipeModule
     
