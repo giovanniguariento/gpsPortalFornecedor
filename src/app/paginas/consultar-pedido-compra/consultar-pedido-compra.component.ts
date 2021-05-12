@@ -25,15 +25,9 @@ export class ConsultarPedidoCompraComponent implements OnInit {
     { cnpjForn: '39.819.977/0001-70', cnpj: '97.587.031/0001-22', nomeGps: 'In-Haus - Inteligência em Logística', numeroPed: '9214' },
     { cnpjForn: '88.477.779/0001-81', cnpj: '82.163.747/0001-25', nomeGps: 'Lc restaurantes', numeroPed: '7272' },
   ];
-  constructor( private menuService : MenuService) { }
+  constructor() { }
 
   ngOnInit() {
-
-    this.menuService.emitirMenu.subscribe(
-      (menu) => {
-        this.ajuste = menu;
-      }
-    );  
     
   }
 

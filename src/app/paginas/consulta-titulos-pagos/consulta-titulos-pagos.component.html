@@ -32,7 +32,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr *ngFor="let item of accounts; let i = index">
                                 <td class="text-nowrap">xxxxxx</td>
                                 <td class="text-nowrap">1234556</td>
                                 <td class="text-nowrap">15</td>
@@ -42,16 +42,13 @@
                                 <td class="text-nowrap">R$ 10.000,00</td>
                                 <td class="text-nowrap">R$ 5.000,00</td>
                                 <td class="text-nowrap">1234</td>
-                                <td class="text-nowrap">Aberto</td>
+                                <td class="text-nowrap">{{item.status}}</td>
                                 <td class="text-nowrap">01/04/2021</td>
                                 <td class="text-nowrap"><i title="Visualizar Arquivo PDF" class="fa fa-file cursor"></i></td>
-                                <td class="text-nowrap"><i (click)='abrirImportarNota()' title="Fazer Upload da Nota"  class="fa fa-upload cursor"></i></td>
-
-
+                                <td class="text-nowrap"><i [ngClass]="{show: this.resource[i].status == 'Aberto'}" (click)='abrirImportarNota()' title="Fazer Upload da Nota"  class="fa fa-upload cursor"></i></td>
                             </tr>
                         </tbody>
                     </table>
-
                     <pagination-controls class="my-pagination" id="paginacaoContatos" directionLink="true"
                         (pageChange)="paginaContato = $event" responsive="true" autoHide="true" previousLabel="Anterior"
                         nextLabel="Próxima">

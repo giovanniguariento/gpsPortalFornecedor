@@ -1,10 +1,13 @@
 <div class="cardPerson m-5">
-    <h1 class="titulo-ultimas-importacoes">
-        Painel de importação de Notas Fiscais
-    </h1>
-    <h4 class="paragrafo-card mb-3">
-        Ferramenta para importação de notas fiscais
-    </h4>
+    <div class="row text-center">
+        <h1 class="titulo-ultimas-importacoes">
+            Painel de importação de Notas Fiscais
+        </h1>
+        <h4 class="paragrafo-card mb-3">
+            Ferramenta para importação de notas fiscais
+        </h4>
+    </div>
+
 
     <!-- Importador de arquivos, cabeçalho -->
     <ng-container *ngIf="xml">
@@ -73,13 +76,12 @@
         </div>
     </ng-container>
     <div class="row">
-        <div class="col-8">
-            <div class="file-drop-area" [formGroup]="form">
-                <button class="botao-outline margL">{{
-                    nomeArquivo
-                    }}</button>
+        <div class="col-3"></div>
+        <div class="col-6 ">
+            <div class="file-drop-area " [formGroup]="form">
+                <button class="botao-outline margL-ajst">{{nomeArquivo}}</button>
                 <img src="../../../assets/images/upload-arquivo.png" alt="imagem de upload de arquivo" width="40px"
-                    class="float-left mr-3 margL" />
+                    class="float-left margL" />
                 <span class="file-msg margL">Arraste ou selecione seu arquivo <br />Formato
                     <strong>.xml</strong></span>
                 <input class="file-input" id="file" #inputFile type="file" accept=".xml"
@@ -91,7 +93,7 @@
 
     <div class="row">
         <div class="col-4"></div>
-        <div class="col-4 alinharDireita">
+        <div class="col-4" style="margin-left: 75px;">
 
             <button class="botao-outline" (click)="cancelarCapturaArquivo()" type="button">CANCELAR</button>
             <button class="btn btn-dark btnGps margL" (click)="postDados()" type="button"

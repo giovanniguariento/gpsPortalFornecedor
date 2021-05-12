@@ -34,9 +34,14 @@ export class AppComponent {
     }
 
     logout(){
+      
+      if(localStorage.menu == 'open'){
+        this.abrirMenu()
+      }
       localStorage.removeItem('menu')
       localStorage.removeItem('userLogin')
       this.router.navigate(['/auth/login'])
+
     }
   
   }
