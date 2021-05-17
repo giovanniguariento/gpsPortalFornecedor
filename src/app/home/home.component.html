@@ -4,7 +4,7 @@
 
 <app-error [error]="error" (alertFechou)="fecharerror($event)">
 </app-error>
-<div class="m-5 cardPerson text-center">
+<div class="m-5 cardPerson text-center"  [ngClass]="{ 'cardPersonAjuste': openMenu == 'close'}">
     <div class="row">
         <h1 class="titulo-ultimas-importacoes">
             Portal do Fornecedor

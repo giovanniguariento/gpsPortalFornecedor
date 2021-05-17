@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-consulta-tabela-preco',
@@ -20,15 +21,21 @@ export class ConsultaTabelaPrecoComponent implements OnInit {
     { name: 'Samantha', tabelaPreco: '13526', loja: 30, status: 'Vigente' },
     { name: 'Amalie', tabelaPreco: '75820', loja: 52, status: 'Vencido' },
   ];
+  openMenu;
 
-
-  constructor() { }
+  constructor( private menuService : MenuService) { }
 
   ngOnInit() {
     // for (let i = 0; i < this.accounts.length; i++) {
 
     //   this.accounts[i].name;
     // }
+
+    this.menuService.emitirMenu.subscribe(
+      (menu) => {
+        this.openMenu = menu;
+      }
+    ); 
   }
 
   public searchUserFilter() {

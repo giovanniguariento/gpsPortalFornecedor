@@ -22,12 +22,17 @@
     z-index: 500;
 }
 
-// @media (min-width: 900px) and (max-width: 1400px)
-// {	
-//   .cardPerson {
-//     max-width: 1000px; 
-//   }
-// }
+ @media (min-width: 700px) and (max-width: 1700px)
+ {	
+   .cardPerson {
+     max-width: 1080px; 
+   }
+ }
+
+ .cardPersonAjuste {
+  max-width: 100% !important;
+}
+
 
 .cardPerson {
     background: white;

@@ -13,7 +13,6 @@ export class AppComponent {
   title = 'portalFornecedor';
 
   isShowMenu = localStorage.getItem('userLogin');
-
     
   
     constructor( private menuService : MenuService , private authService : AuthService , private router: Router) { }
@@ -43,5 +42,6 @@ export class AppComponent {
       this.router.navigate(['/auth/login'])
 
     }
+
+}
   
-  }

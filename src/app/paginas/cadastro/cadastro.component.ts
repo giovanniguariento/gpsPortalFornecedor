@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,10 +17,16 @@ export class CadastroComponent implements OnInit {
     { name: 'Amalie' },
     { name: 'Estefanía' }
   ];
-
-  constructor() { }
+  openMenu;
+  constructor(private menuService : MenuService) { }
 
   ngOnInit() {
+
+    this.menuService.emitirMenu.subscribe(
+      (menu) => {
+        this.openMenu = menu;
+      }
+    ); 
   }
 
   public abrirNovoUsuario() {

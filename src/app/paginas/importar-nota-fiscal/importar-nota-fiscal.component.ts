@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { MenuService } from 'src/app/services/menu.service';
 import * as xml2js from 'xml2js';
 
 @Component({
@@ -36,6 +37,7 @@ export class ImportarNotaFiscalComponent implements OnInit {
   public buscou = false;
 
   public form: FormGroup;
+  public openMenu;
 
   public tipoArquivo: any;
   xml: any;
@@ -43,10 +45,16 @@ export class ImportarNotaFiscalComponent implements OnInit {
   constructor(
     private Toastr: ToastrService,
     private formBuilder: FormBuilder,
+    private menuService : MenuService
   ) { }
 
   ngOnInit(): void {
     this.createForm();
+    this.menuService.emitirMenu.subscribe(
+      (menu) => {
+        this.openMenu = menu;
+      }
+    ); 
   }
 
 

@@ -11,11 +11,17 @@ export class HomeComponent implements OnInit {
   public loading: boolean = false;
   public alertSucesso: boolean = false;
   public error: boolean = false;
-
+  openMenu = 'close';
 
   constructor( private menuService : MenuService) { }
 
   ngOnInit() {
+
+    this.menuService.emitirMenu.subscribe(
+      (menu) => {
+        this.openMenu = menu;
+      }
+    ); 
   }
 
   // Fechar o alerta de sucesso, clicando no botão OK

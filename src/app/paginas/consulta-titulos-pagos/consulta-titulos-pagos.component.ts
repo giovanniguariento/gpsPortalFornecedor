@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-consulta-titulos-pagos',
@@ -17,10 +18,18 @@ export class ConsultaTitulosPagosComponent implements OnInit {
 
   public importarNota = false;
 
-  constructor() { }
+  openMenu;
+
+  constructor( private menuService: MenuService) { }
 
   ngOnInit() {
 this.teste();
+
+this.menuService.emitirMenu.subscribe(
+  (menu) => {
+    this.openMenu = menu;
+  }
+);  
 
   }
 

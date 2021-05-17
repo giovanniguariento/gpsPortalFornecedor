@@ -2,7 +2,7 @@
 <app-edicao-usuario [editarUsuario]="editarUsuario" (alertFechou)="fecharEditarUsuario($event)"></app-edicao-usuario>
 
 
-<div class="m-5 cardPerson">
+<div class="m-5 cardPerson" [ngClass]="{ 'cardPersonAjuste': openMenu == 'close'}">
     <div class="col-12">
         <div class="mb-4">
             <h1 class="titulo-ultimas-importacoes">
